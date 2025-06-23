@@ -1,0 +1,42 @@
+.container {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transform: translateX(-50%);
+    width: 380px;
+    height: 30px;
+    border-radius: 80px;
+    padding: 10px;
+    background-color: var(--navbar);
+}
+
+
+.botoes {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.botao {
+    color: var(--texto);
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+    background-color: transparent;
+    border-width: 0px;
+    border-radius: 18px;
+    padding: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.botao:hover {
+    color: var(--azul);
+    cursor: pointer;
+    background-color: var(--navbar-hover);
+
+}
