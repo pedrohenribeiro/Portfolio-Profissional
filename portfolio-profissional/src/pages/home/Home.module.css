@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+h1,h2,p,button{
+    font-family: "Roboto", sans-serif;
+}
+
+.page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    background-color: var(--secundaria);
+}
+
+.foto{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-top: 50px;
+    background-color: var(--principal);
+}
+.containerTopo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+}
+.nome{
+    color: var(--titulo);
+    font-size: 54px;
+    font-weight: 600;
+    margin-top: 30px;
+    
+}
+.area{
+    color: var(--azul);
+    font-size: 30px;
+    font-weight: 500;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.texto{
+    color: var(--texto);
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 10px;
+    max-width: 800px;
+    text-align: center;
+}
+
+.botao{
+    color: var(--texto);
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+    background-color: transparent;
+    border-width: 1px solid var(--azul);
+    border-radius: 18px;
+    padding: 10px 20px;
+    margin-top: 20px;
+    /* transition: all 0.3s ease-in-out; */
+}
+.containerSobremim{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+}
+.containerProjetos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+}
+#meusProjetos{
+    text-align: left;
+}
+.titulo{
+    color: var(--titulo);
+    font-size: 44px;
+    font-weight: 600;
+    margin-top: 50px;
+}
+
+.subtitulo{
+    color: var(--azul-claro);
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 5px;
+}
