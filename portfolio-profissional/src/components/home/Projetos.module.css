@@ -1,0 +1,70 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+}
+
+.card{
+    width: auto;
+    max-width: 900px;
+    height: auto;
+    margin: 20px;
+    border-radius: 18px;
+}
+
+.descricao{
+    color: var(--texto);
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 10px;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.tecnologias{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    gap: 10px;
+    margin-top: 10px;
+    gap: 10px;
+}
+
+.tecnologia{
+    color: var(--azul-claro);
+    font-size: 16px;
+    font-weight: 500;
+    background-color: var(--secundaria);
+    border: 2px solid var(--azul-claro);
+    padding: 8px 15px;
+    border-radius: 18px;
+}
+
+.titulo{
+    color: var(--a);
+    font-size: 32px;
+    font-weight: 600;
+    margin-top: 10px;
+    text-align: left;
+}
+.periodo{
+    color: var(--periodo);
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 5px;
+    text-align: left;
+}
+
+.texto{
+    color: var(--texto);
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 10px;
+    text-align: justify;
+}
