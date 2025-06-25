@@ -68,3 +68,26 @@
     margin-top: 10px;
     text-align: justify;
 }
+
+.botao{
+    color: var(--azul-claro);
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+    background-color: transparent;
+    background-color: var(--secundaria);
+    border: 2px solid var(--azul-claro);
+    padding: 10px 20px;
+    margin-top: 20px;
+    max-width: 200px;
+    border-radius: 18px;
+    transition: 0.5s;
+}
+
+.botao:hover{
+    border-width: 2px solid;
+    border-color: var(--titulo);
+    color: var(--titulo);
+    transition: 0.5s;
+    transform: translateY(-2px);
+}

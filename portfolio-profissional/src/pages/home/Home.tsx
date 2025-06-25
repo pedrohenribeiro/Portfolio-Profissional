@@ -51,6 +51,33 @@ function Home() {
 
       </div>
 
+      <div style={styles.containerHabilidades}>
+        <h1 className={styles.titulo}>
+          Habilidades
+        </h1>
+        <h2 className={styles.subtitulo}>
+          Confira minhas habilidades
+        </h2>
+
+        <div className={styles.habilidades}>
+          <div className={styles.habilidade}>HTML</div>
+          <div className={styles.habilidade}>CSS</div>
+          <div className={styles.habilidade}>JavaScript</div>
+          <div className={styles.habilidade}>TypeScript</div>
+          <div className={styles.habilidade}>React</div>
+          <div className={styles.habilidade}>React Native</div>
+          <div className={styles.habilidade}>Node.js</div>
+          <div className={styles.habilidade}>Express.js</div>
+          <div className={styles.habilidade}>MongoDB</div>
+          <div className={styles.habilidade}>MySQL</div>
+          <div className={styles.habilidade}>GitHub</div>
+          <div className={styles.habilidade}>Azure</div>
+          <div className={styles.habilidade}>AWS</div>
+          <div className={styles.habilidade}>Google Cloud Platform</div>
+          <div className={styles.habilidade}>Godot</div>
+        </div>
+      </div>
+
       <div className={styles.containerProjetos}>
         <h1 className={styles.titulo} id={styles.meusProjetos}>
           Meus Projetos
