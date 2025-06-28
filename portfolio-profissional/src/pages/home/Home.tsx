@@ -1,5 +1,8 @@
 import styles from './Home.module.css';
 import foto from '../../assets/images/foto.png';
+import techschoolImg from '../../assets/images/techschool-dark.png';
+import zariImg from '../../assets/images/assistente-zari.png';
+import dashboardImg from '../../assets/images/dashboard.png';
 import Projetos from '../../components/home/Projetos';
 
 function Home() {
@@ -7,13 +10,13 @@ function Home() {
     <div className={styles.page}>
       <div className={styles.containerTopo}>
 
-       
-        <img 
+
+        <img
           src={foto}
-          alt="Foto de perfil" 
-          className={styles.foto} 
+          alt="Foto de perfil"
+          className={styles.foto}
         />
-      
+
         <h1 className={styles.nome}>Pedro Henrique Ribeiro</h1>
         <h2 className={styles.area}>FullStack</h2>
         <p className={styles.texto}>
@@ -22,7 +25,7 @@ function Home() {
         </p>
 
         <button className={styles.botao}>Contate-me</button>
-        
+
       </div>
 
       <div className={styles.containerSobremim}>
@@ -37,7 +40,7 @@ function Home() {
           Eu sempre fui apaixonado por tecnologia, eu gostava muito de jogar no video game e no computador, então no meio do ensino fundamental, em 2016 eu comecei a estudar Game Design na Microcamp, tive meu primeiro contato com uma linguagem de programação com c++ na Unreal Engine 3.5. Minha parte favorita na época era modelagem 3D no 3DMax. Em 2018 quando terminei o curso e comecei a fazer outros 2 cursos em focados para Game Design na Advanced e Saga, finalizei o curso da advanced mas precisei sair do curso da Saga, nesse mesmo período (2017) também iniciei o curso Hardware e Robótica na Microcamp, onde me apaixonei por IOT(Inteligência das coisas), finalizei o curso em 2018.
         </p>
 
-{/*         <p className={styles.texto}>
+        {/*         <p className={styles.texto}>
           Em 2019, participei do Empreende19, uma feira para alunos de escolas públicas de SJC, apresentando o MaxClean, uma torneira tecnológica que dispunha de sensores para controlar água e sabão, além de LEDs indicadores de nível de sabão, sendo responsável pela parte eletrônica e codificação.
         </p>
 
@@ -86,7 +89,33 @@ function Home() {
           Confira alguns dos meus projetos
         </h2>
 
-        <Projetos />
+        <Projetos
+          foto={techschoolImg}
+          tecnologias={['Html', 'Css', 'Flask', 'Figma']}
+          titulo="Techschool"
+          periodo="// 1º Semestre de 2023"
+          texto="O desenvolvimento do projeto ocorreu no primeiro semestre do curso, com a direção do professor Antônio Egydio, que simulava ser um cliente externo para aproximar as equipes da realidade do mercado de trabalho. Desenvolver um site informativo, simples e funcional sobre a Metodologia Ágil, contendo conceitos e fundamentos, além de exemplos práticos e um sistema de avaliações para o usuário."
+          lado='esquerda'
+        />
+
+        <Projetos
+          foto={zariImg}
+          tecnologias={['Java', 'MySQL', 'Gradle', 'Eclipse', 'Figma']}
+          titulo="Assistente Zari"
+          periodo="// 2º Semestre de 2023"
+          texto="O desenvolvimento do projeto ocorreu no segundo semestre do curso, com a direção do professor Giuliano Bertoti, que simulava ser um cliente externo para aproximar as equipes da realidade do mercado de trabalho. O projeto desenvolvido no 2º semestre teve como objetivo criar um assistente virtual capaz de ler documentos e responder a perguntas relacionadas ao seu conteúdo, facilitando o acesso rápido a informações específicas."
+          lado='direita'
+        />
+
+        <Projetos
+          foto={dashboardImg}
+          tecnologias={['React', 'TypeScript', 'JavaScript', 'Node.Js', 'Figma', 'MySQL']}
+          titulo="Dashboard Pro4Tech"
+          periodo="// 1º Semestre de 2024"
+          texto="O desenvolvimento do projeto ocorreu no terceiro semestre do curso, com a empresa Pro4Tech sendo o nosso cliente externo, que me ajudou muito a aproximar da realidade do mercado de trabalho.O objetivo deste projeto foi criar um dashboard dinâmico e interativo para análise e visualização de dados de vendas. O sistema foi projetado para gerar insights visuais claros e rápidos, permitindo que a Pro4Tech tomasse decisões estratégicas baseadas em dados reais, a principal meta foi facilitar a interpretação de grandes volumes de dados de vendas."
+          lado='esquerda'
+        />
+
       </div>
 
     </div>

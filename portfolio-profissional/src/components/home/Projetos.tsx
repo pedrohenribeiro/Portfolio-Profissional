@@ -6,7 +6,7 @@ interface ProjetosProps {
   titulo: string;
   periodo: string;
   texto: string;
-  lado?: 'esquerda' | 'direita'; // nova prop opcional
+  lado?: 'esquerda' | 'direita';
 }
 
 function Projetos({ foto, tecnologias, titulo, periodo, texto, lado = 'esquerda' }: ProjetosProps) {
