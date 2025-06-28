@@ -30,11 +30,12 @@
 .tecnologias{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: left;
     gap: 10px;
     margin-top: 10px;
-    gap: 10px;
+    max-width: 500px;
 }
 
 .tecnologia{
@@ -92,4 +93,17 @@
     color: var(--titulo);
     transition: 0.5s;
     transform: translateY(-2px);
+}
+
+@media (max-width: 1524px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card{
+    order: 0;
+  }
+  .descricao{
+    order: 1;
+  }
 }
