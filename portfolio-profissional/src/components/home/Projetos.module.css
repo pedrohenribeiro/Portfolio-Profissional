@@ -1,6 +1,7 @@
 .container{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     gap: 30px;
@@ -67,6 +68,7 @@
     font-weight: 400;
     margin-top: 10px;
     text-align: justify;
+    max-width: 500px;
 }
 
 .botao{

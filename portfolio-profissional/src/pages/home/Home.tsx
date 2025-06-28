@@ -51,7 +51,7 @@ function Home() {
 
       </div>
 
-      <div style={styles.containerHabilidades}>
+      <div className={styles.containerHabilidades}>
         <h1 className={styles.titulo}>
           Habilidades
         </h1>
