@@ -11,4 +11,19 @@
   --periodo: #b3b3b3;
   --azul: #1586ff;
   --azul-claro: #4baeff;
+
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  background: var(--secundaria);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--azul-claro);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--titulo) !important;
 }
