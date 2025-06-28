@@ -3,6 +3,7 @@
   --principal: #181c27;
   --principal-hover: #1a1a1a;
   --secundaria: #1a1a1a;
+  --terciaria: #202020;
   --navbar: #000000;
   --navbar-hover: #080808;
   --titulo: #ffffff;
@@ -26,4 +27,8 @@
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--titulo) !important;
+}
+
+html, body {
+  background-color: var(--secundaria);
 }
