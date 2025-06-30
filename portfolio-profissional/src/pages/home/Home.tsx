@@ -1,7 +1,7 @@
 import styles from './Home.module.css';
 import foto from '../../assets/images/foto.png';
 import techschoolImg from '../../assets/images/techschool-dark.png';
-import zariImg from '../../assets/images/assistente-zari.png';
+import wecolebImg from '../../assets/images/wecoleb.png';
 import dashboardImg from '../../assets/images/dashboard.png';
 import Projetos from '../../components/home/Projetos';
 
@@ -98,14 +98,14 @@ function Home() {
           lado='esquerda'
         />
 
-        <Projetos
+{/*         <Projetos
           foto={zariImg}
           tecnologias={['Java', 'MySQL', 'Gradle', 'Eclipse', 'Figma']}
           titulo="Assistente Zari"
           periodo="// 2º Semestre de 2023"
           texto="O desenvolvimento do projeto ocorreu no segundo semestre do curso, com a direção do professor Giuliano Bertoti, que simulava ser um cliente externo para aproximar as equipes da realidade do mercado de trabalho. O projeto desenvolvido no 2º semestre teve como objetivo criar um assistente virtual capaz de ler documentos e responder a perguntas relacionadas ao seu conteúdo, facilitando o acesso rápido a informações específicas."
           lado='direita'
-        />
+        /> */}
 
         <Projetos
           foto={dashboardImg}
@@ -113,6 +113,15 @@ function Home() {
           titulo="Dashboard Pro4Tech"
           periodo="// 1º Semestre de 2024"
           texto="O desenvolvimento do projeto ocorreu no terceiro semestre do curso, com a empresa Pro4Tech sendo o nosso cliente externo, que me ajudou muito a aproximar da realidade do mercado de trabalho.O objetivo deste projeto foi criar um dashboard dinâmico e interativo para análise e visualização de dados de vendas. O sistema foi projetado para gerar insights visuais claros e rápidos, permitindo que a Pro4Tech tomasse decisões estratégicas baseadas em dados reais, a principal meta foi facilitar a interpretação de grandes volumes de dados de vendas."
+          lado='direita'
+        />
+
+        <Projetos
+          foto={wecolebImg}
+          tecnologias={['React', 'TypeScript', 'Node.Js', 'Figma', 'MySQL']}
+          titulo="Wecolleb"
+          periodo="// 2º Semestre de 2024"
+          texto="O desenvolvimento do projeto ocorreu no quarto semestre do curso, com a empresa JJM Log sendo o nosso cliente externo, que me ajudou muito a aproximar da realidade do mercado de trabalho. O objetivo deste projeto foi desenvolver um sistema web que otimizasse o controle de processos internos na JJM Log, facilitando a colaboração entre diferentes departamentos e automatizando atividades manuais. A principal meta foi melhorar a integração entre setores e proporcionar uma gestão de demandas mais eficiente e em tempo real."
           lado='esquerda'
         />
 
