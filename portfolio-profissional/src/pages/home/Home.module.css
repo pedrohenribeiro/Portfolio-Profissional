@@ -6,10 +6,7 @@
   margin: 0;
 }
 
-h1,
-h2,
-p,
-button {
+h1,h2,h3,p,span,button {
   font-family: "Roboto", sans-serif;
 }
 
@@ -109,6 +106,56 @@ button {
   flex-direction: column;
   align-items: center;
   margin-top: 40px;
+}
+
+.habilidades{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.cardHabilidades {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--secundaria);
+  border-width: 2px;
+  border-style: solid;
+  border-color: var(--azul-claro);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  width: 340px;
+  height: 260px;
+}
+
+.topoCard{
+  width: 100%;
+  padding: 0px 0px 10px 0px;
+  border-bottom: 2px solid var(--azul-claro);
+  justify-content: center;
+}
+
+.tituloCard {
+  color: var(--titulo);
+  font-size: 24px;
+  text-align: center;
+}
+
+.conteudoCard {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  margin-top: 16px;
+  gap: 30px;
+}
+.conjuntoHabilidades{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
 #meusProjetos {

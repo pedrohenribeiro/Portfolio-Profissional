@@ -5,6 +5,7 @@ import wecolebImg from '../../assets/images/wecoleb.png';
 import dashboardImg from '../../assets/images/dashboard.png';
 import recibifyImg from '../../assets/images/recibify.png';
 import Projetos from '../../components/home/Projetos';
+import CardHabilidade from '../../components/home/CardHabilidade';
 
 function Home() {
   return (
@@ -62,8 +63,65 @@ function Home() {
         <h2 className={styles.subtitulo}>
           Confira minhas habilidades
         </h2>
-
+        
         <div className={styles.habilidades}>
+
+          <div className={styles.cardHabilidades}>
+            <div className={styles.topoCard}>
+              <h3 className={styles.tituloCard}>Hard Skils</h3>
+            </div>
+            <div className={styles.conteudoCard}>
+              <div className={styles.conjuntoHabilidades}>
+                <CardHabilidade
+                  nome='JavaScript'
+                  link='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg'
+                />
+                <CardHabilidade
+                  nome='TypeScript'
+                  link='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg'
+                />
+                <CardHabilidade
+                  nome='React'
+                  link='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg'
+                />
+                <CardHabilidade
+                  nome='React Native'
+                  link='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg'
+                />
+                <CardHabilidade
+                  nome='Python'
+                  link='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg'
+                />
+              </div>
+              <div className={styles.conjuntoHabilidades}>
+                <CardHabilidade
+                  nome='Node.js'
+                  link='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg'
+                />
+                <CardHabilidade
+                  nome='AWS'
+                  link='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg'
+                />
+                <CardHabilidade
+                  nome='MongoDB'
+                  link='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg'
+                />
+                <CardHabilidade
+                  nome='MySQL'
+                  link='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg'
+                />
+                <CardHabilidade
+                  nome='Figma'
+                  link='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg'
+                />
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+{/*     <div className={styles.habilidades}>
           <div className={styles.habilidade}>HTML</div>
           <div className={styles.habilidade}>CSS</div>
           <div className={styles.habilidade}>JavaScript</div>
@@ -79,8 +137,7 @@ function Home() {
           <div className={styles.habilidade}>AWS</div>
           <div className={styles.habilidade}>Google Cloud Platform</div>
           <div className={styles.habilidade}>Godot</div>
-        </div>
-      </div>
+        </div> */}
 
       <div className={styles.containerProjetos}>
         <h1 className={styles.titulo} id={styles.meusProjetos}>
