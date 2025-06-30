@@ -4,10 +4,12 @@ import techschoolImg from '../../assets/images/techschool-dark.png';
 import wecolebImg from '../../assets/images/wecoleb.png';
 import dashboardImg from '../../assets/images/dashboard.png';
 import recibifyImg from '../../assets/images/recibify.png';
+import githubWhite from '../../assets/images/github.svg';
 import Projetos from '../../components/home/Projetos';
 import CardHabilidade from '../../components/home/CardHabilidade';
 
 function Home() {
+  
   return (
     <div className={styles.page}>
       <div className={styles.containerTopo}>
@@ -60,12 +62,8 @@ function Home() {
         <h1 className={styles.titulo}>
           Habilidades
         </h1>
-        <h2 className={styles.subtitulo}>
-          Confira minhas habilidades
-        </h2>
         
         <div className={styles.habilidades}>
-
           <div className={styles.cardHabilidades}>
             <div className={styles.topoCard}>
               <h3 className={styles.tituloCard}>Hard Skils</h3>
@@ -81,10 +79,6 @@ function Home() {
                   link='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg'
                 />
                 <CardHabilidade
-                  nome='React'
-                  link='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg'
-                />
-                <CardHabilidade
                   nome='React Native'
                   link='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg'
                 />
@@ -92,8 +86,10 @@ function Home() {
                   nome='Python'
                   link='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg'
                 />
-              </div>
-              <div className={styles.conjuntoHabilidades}>
+                <CardHabilidade
+                  nome='Flask'
+                  link='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg'
+                />
                 <CardHabilidade
                   nome='Node.js'
                   link='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg'
@@ -101,6 +97,10 @@ function Home() {
                 <CardHabilidade
                   nome='AWS'
                   link='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg'
+                />
+                <CardHabilidade
+                  nome='Azure'
+                  link='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg'
                 />
                 <CardHabilidade
                   nome='MongoDB'
@@ -113,6 +113,34 @@ function Home() {
                 <CardHabilidade
                   nome='Figma'
                   link='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg'
+                />
+                <CardHabilidade
+                  nome='Java'
+                  link='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg'
+                />
+                <CardHabilidade
+                  nome='Unity'
+                  link='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg'
+                />
+                <CardHabilidade
+                  nome='Godot'
+                  link='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/godot/godot-original.svg'
+                />
+                <CardHabilidade
+                  nome='Jira'
+                  link='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg'
+                />
+                <CardHabilidade
+                  nome='Github'
+                  link={githubWhite}
+                />
+                <CardHabilidade
+                  nome='Nginx'
+                  link='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg'
+                />
+                <CardHabilidade
+                  nome='Linux'
+                  link='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg'
                 />
               </div>
 
