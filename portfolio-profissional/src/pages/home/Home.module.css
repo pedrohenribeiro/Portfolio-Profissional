@@ -1,114 +1,230 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 
-*{
-    padding: 0;
-    margin: 0;
+* {
+  padding: 0;
+  margin: 0;
 }
 
-h1,h2,p,button{
-    font-family: "Roboto", sans-serif;
+h1,h2,h3,p,span,button {
+  font-family: "Roboto", sans-serif;
 }
 
-.page{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100%;
-    background-color: var(--secundaria);
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  background-color: var(--secundaria);
 }
 
-.foto{
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    margin-top: 50px;
-    background-color: var(--principal);
-}
-.containerTopo{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 80px;
-}
-.nome{
-    color: var(--titulo);
-    font-size: 54px;
-    font-weight: 600;
-    margin-top: 30px;
-    
-}
-.area{
-    color: var(--azul);
-    font-size: 30px;
-    font-weight: 500;
-    margin-top: 10px;
-    margin-bottom: 20px;
-}
-.texto{
-    color: var(--texto);
-    font-size: 18px;
-    font-weight: 400;
-    margin-top: 10px;
-    max-width: 800px;
-    text-align: center;
+.foto {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  margin-top: 50px;
+  background-color: var(--principal);
 }
 
-.botao{
-    color: var(--azul-claro);
-    font-size: 18px;
-    font-weight: 500;
-    text-decoration: none;
-    background-color: transparent;
-    background-color: var(--secundaria);
-    border: 2px solid var(--azul-claro);
-    padding: 10px 20px;
-    margin-top: 20px;
-    max-width: 200px;
-    border-radius: 18px;
-    transition: 0.5s;
+.containerTopo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
 }
 
-.botao:hover{
-    border-width: 2px solid;
-    border-color: var(--titulo);
-    color: var(--titulo);
-    transition: 0.5s;
-    transform: translateY(-2px);
+.nome {
+  color: var(--titulo);
+  font-size: 54px;
+  font-weight: 600;
+  margin-top: 30px;
+  word-break: break-word;
+  text-align: center;
 }
 
-.containerSobremim{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 80px;
+.area {
+  color: var(--azul);
+  font-size: 30px;
+  font-weight: 500;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
-.containerProjetos{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 80px;
+
+.texto {
+  color: var(--texto);
+  font-size: 18px;
+  font-weight: 400;
+  margin-top: 10px;
+  max-width: 800px;
+  text-align: justify;
+  padding-left: 10px;
+  padding-right: 10px;
 }
-.containerHabilidades{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 80px;
+
+.botao {
+  color: var(--azul-claro);
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: none;
+  background-color: transparent;
+  background-color: var(--secundaria);
+  border: 2px solid var(--azul-claro);
+  padding: 10px 20px;
+  margin-top: 20px;
+  max-width: 200px;
+  border-radius: 18px;
+  transition: 0.5s;
 }
-#meusProjetos{
-    text-align: left;
+
+.botao:hover {
+  border-width: 2px solid;
+  border-color: var(--titulo);
+  color: var(--titulo);
+  transition: 0.5s;
+  transform: translateY(-2px);
 }
-.titulo{
-    color: var(--titulo);
+
+.containerSobremim {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.containerProjetos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.containerHabilidades {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.habilidades{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.cardHabilidades {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--secundaria);
+  border-width: 2px;
+  border-style: solid;
+  border-color: var(--azul-claro);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  width: 340px;
+  height: 260px;
+}
+
+.topoCard{
+  width: 100%;
+  padding: 0px 0px 10px 0px;
+  border-bottom: 2px solid var(--azul-claro);
+  justify-content: center;
+}
+
+.tituloCard {
+  color: var(--titulo);
+  font-size: 24px;
+  text-align: center;
+}
+
+.conteudoCard {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  margin-top: 16px;
+  gap: 30px;
+}
+.conjuntoHabilidades{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+#meusProjetos {
+  text-align: left;
+}
+
+.titulo {
+  color: var(--titulo);
+  font-size: 44px;
+  font-weight: 600;
+  margin-top: 40px;
+}
+
+.subtitulo {
+  color: var(--azul-claro);
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 900px) {
+  .texto {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .nome {
     font-size: 44px;
-    font-weight: 600;
-    margin-top: 50px;
+  }
+
+  .area {
+    font-size: 28px;
+  }
+
+  .titulo {
+    font-size: 38px;
+  }
+
+  .subtitulo {
+    font-size: 18px;
+  }
+
+  .texto {
+    font-size: 16px;
+  }
 }
 
-.subtitulo{
-    color: var(--azul-claro);
-    font-size: 18px;
-    font-weight: 500;
-    margin-top: 5px;
+@media (max-width: 500px) {
+  .nome {
+    font-size: 38px;
+  }
+
+  .titulo {
+    font-size: 34px;
+  }
+
+  .subtitulo {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 430px) {
+  .nome {
+    font-size: 34px;
+  }
+
+  .titulo {
+    font-size: 30px;
+  }
 }
