@@ -1,4 +1,4 @@
-.container{
+.container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -6,17 +6,31 @@
     justify-content: center;
     gap: 30px;
     padding: 20px;
+    box-sizing: border-box;
+    max-width: 100vw;
+    width: 100%;
+
+    border-radius: 16px;
+    transition: 0.5s;
+}
+.container:hover {
+    background-color: var(--terciaria);
+    transition: 0.5s;
+    transform: translateY(-2px);
+    transform: scale3d(1.01, 1.01, 1.01);
 }
 
-.card{
-    width: auto;
+.card {
+    width: 100%;
     max-width: 900px;
     height: auto;
-    margin: 20px;
+    margin: 20px 10px;
     border-radius: 18px;
+    box-sizing: border-box;
+    object-fit: contain;
 }
 
-.descricao{
+.descricao {
     color: var(--texto);
     font-size: 18px;
     font-weight: 400;
@@ -25,19 +39,25 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+    box-sizing: border-box;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: auto;
+    max-width: 900px;
 }
 
-.tecnologias{
+.tecnologias {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: left;
     gap: 10px;
     margin-top: 10px;
-    gap: 10px;
+    max-width: 500px;
 }
 
-.tecnologia{
+.tecnologia {
     color: var(--azul-claro);
     font-size: 16px;
     font-weight: 500;
@@ -47,14 +67,15 @@
     border-radius: 18px;
 }
 
-.titulo{
+.titulo {
     color: var(--a);
     font-size: 32px;
     font-weight: 600;
     margin-top: 10px;
     text-align: left;
 }
-.periodo{
+
+.periodo {
     color: var(--periodo);
     font-size: 16px;
     font-weight: 400;
@@ -62,16 +83,17 @@
     text-align: left;
 }
 
-.texto{
+.texto {
     color: var(--texto);
     font-size: 16px;
     font-weight: 400;
     margin-top: 10px;
     text-align: justify;
     max-width: 500px;
+    width: auto;
 }
 
-.botao{
+.botao {
     color: var(--azul-claro);
     font-size: 18px;
     font-weight: 500;
@@ -86,10 +108,48 @@
     transition: 0.5s;
 }
 
-.botao:hover{
+.botao:hover {
     border-width: 2px solid;
     border-color: var(--titulo);
     color: var(--titulo);
     transition: 0.5s;
     transform: translateY(-2px);
+    cursor: pointer;
+}
+
+@media (max-width: 900px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .card {
+        max-width: 100%;
+        margin: 10px 0;
+    }
+
+    .descricao {
+        max-width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+@media (max-width: 1524px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        order: 0;
+    }
+
+    .descricao {
+        order: 1;
+    }
+    .texto {
+        max-width: none;
+    }
 }
