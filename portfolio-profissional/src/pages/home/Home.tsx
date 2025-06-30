@@ -147,52 +147,54 @@ function Home() {
           Confira alguns dos meus projetos
         </h2>
         
+        <div className={styles.projetos}>
 
-        <Projetos
-          foto={recibifyImg}
-          tecnologias={['ReactNative', 'TypeScript', 'Node.Js', 'Expo Go', 'MySQL', 'MongoDB', 'Figma', 'Hostinger']}
-          titulo="Recibify"
-          periodo="// 1º Semestre de 2025"
-          texto="📱 Criamos um aplicativo móvel que permite aos usuários registrar reembolsos, anexar comprovantes, incluir descrições e acompanhar o status das solicitações.
-          💻 Também desenvolvemos um sistema web corporativo onde os gerentes podem monitorar as despesas e aprovar ou recusar solicitações, tornando o processo muito mais eficiente."
-          lado='esquerda'
-        />
+          <Projetos
+            foto={recibifyImg}
+            tecnologias={['ReactNative', 'TypeScript', 'Node.Js', 'Expo Go', 'MySQL', 'MongoDB', 'Figma', 'Hostinger']}
+            titulo="Recibify"
+            periodo="1º Semestre de 2025"
+            texto="📱 Criamos um aplicativo móvel que permite aos usuários registrar reembolsos, anexar comprovantes, incluir descrições e acompanhar o status das solicitações.
+            💻 Também desenvolvemos um sistema web corporativo onde os gerentes podem monitorar as despesas e aprovar ou recusar solicitações, tornando o processo muito mais eficiente."
+            lado='esquerda'
+          />
 
-        <Projetos
-          foto={techschoolImg}
-          tecnologias={['Html', 'Css', 'Flask', 'Figma']}
-          titulo="Techschool"
-          periodo="// 1º Semestre de 2023"
-          texto="O desenvolvimento do projeto ocorreu no primeiro semestre do curso, com a direção do professor Antônio Egydio, que simulava ser um cliente externo para aproximar as equipes da realidade do mercado de trabalho. Desenvolver um site informativo, simples e funcional sobre a Metodologia Ágil, contendo conceitos e fundamentos, além de exemplos práticos e um sistema de avaliações para o usuário."
-          lado='direita'
-        />
+          <Projetos
+            foto={techschoolImg}
+            tecnologias={['Html', 'Css', 'Flask', 'Figma']}
+            titulo="Techschool"
+            periodo="1º Semestre de 2023"
+            texto="O desenvolvimento do projeto ocorreu no primeiro semestre do curso, com a direção do professor Antônio Egydio, que simulava ser um cliente externo para aproximar as equipes da realidade do mercado de trabalho. Desenvolver um site informativo, simples e funcional sobre a Metodologia Ágil, contendo conceitos e fundamentos, além de exemplos práticos e um sistema de avaliações para o usuário."
+            lado='direita'
+          />
 
-{/*         <Projetos
-          foto={zariImg}
-          tecnologias={['Java', 'MySQL', 'Gradle', 'Eclipse', 'Figma']}
-          titulo="Assistente Zari"
-          periodo="// 2º Semestre de 2023"
-          texto="O desenvolvimento do projeto ocorreu no segundo semestre do curso, com a direção do professor Giuliano Bertoti, que simulava ser um cliente externo para aproximar as equipes da realidade do mercado de trabalho. O projeto desenvolvido no 2º semestre teve como objetivo criar um assistente virtual capaz de ler documentos e responder a perguntas relacionadas ao seu conteúdo, facilitando o acesso rápido a informações específicas."
-          lado='direita'
-        /> */}
+  {/*         <Projetos
+            foto={zariImg}
+            tecnologias={['Java', 'MySQL', 'Gradle', 'Eclipse', 'Figma']}
+            titulo="Assistente Zari"
+            periodo="2º Semestre de 2023"
+            texto="O desenvolvimento do projeto ocorreu no segundo semestre do curso, com a direção do professor Giuliano Bertoti, que simulava ser um cliente externo para aproximar as equipes da realidade do mercado de trabalho. O projeto desenvolvido no 2º semestre teve como objetivo criar um assistente virtual capaz de ler documentos e responder a perguntas relacionadas ao seu conteúdo, facilitando o acesso rápido a informações específicas."
+            lado='direita'
+          /> */}
 
-        <Projetos
-          foto={dashboardImg}
-          tecnologias={['React', 'TypeScript', 'JavaScript', 'Node.Js', 'Figma', 'MySQL']}
-          titulo="Dashboard Pro4Tech"
-          periodo="// 1º Semestre de 2024"
-          texto="O desenvolvimento do projeto ocorreu no terceiro semestre do curso, com a empresa Pro4Tech sendo o nosso cliente externo, que me ajudou muito a aproximar da realidade do mercado de trabalho.O objetivo deste projeto foi criar um dashboard dinâmico e interativo para análise e visualização de dados de vendas. O sistema foi projetado para gerar insights visuais claros e rápidos, permitindo que a Pro4Tech tomasse decisões estratégicas baseadas em dados reais, a principal meta foi facilitar a interpretação de grandes volumes de dados de vendas."
-          lado='esquerda'
-        />
+          <Projetos
+            foto={dashboardImg}
+            tecnologias={['React', 'TypeScript', 'JavaScript', 'Node.Js', 'Figma', 'MySQL']}
+            titulo="Dashboard Pro4Tech"
+            periodo="1º Semestre de 2024"
+            texto="O desenvolvimento do projeto ocorreu no terceiro semestre do curso, com a empresa Pro4Tech sendo o nosso cliente externo, que me ajudou muito a aproximar da realidade do mercado de trabalho.O objetivo deste projeto foi criar um dashboard dinâmico e interativo para análise e visualização de dados de vendas. O sistema foi projetado para gerar insights visuais claros e rápidos, permitindo que a Pro4Tech tomasse decisões estratégicas baseadas em dados reais, a principal meta foi facilitar a interpretação de grandes volumes de dados de vendas."
+            lado='esquerda'
+          />
 
-        <Projetos
-          foto={wecolebImg}
-          tecnologias={['React', 'TypeScript', 'Node.Js', 'Figma', 'MySQL']}
-          titulo="Wecolleb"
-          periodo="// 2º Semestre de 2024"
-          texto="O desenvolvimento do projeto ocorreu no quarto semestre do curso, com a empresa JJM Log sendo o nosso cliente externo, que me ajudou muito a aproximar da realidade do mercado de trabalho. O objetivo deste projeto foi desenvolver um sistema web que otimizasse o controle de processos internos na JJM Log, facilitando a colaboração entre diferentes departamentos e automatizando atividades manuais. A principal meta foi melhorar a integração entre setores e proporcionar uma gestão de demandas mais eficiente e em tempo real."
-          lado='direita'
-        />
+          <Projetos
+            foto={wecolebImg}
+            tecnologias={['React', 'TypeScript', 'Node.Js', 'Figma', 'MySQL']}
+            titulo="Wecolleb"
+            periodo="2º Semestre de 2024"
+            texto="O desenvolvimento do projeto ocorreu no quarto semestre do curso, com a empresa JJM Log sendo o nosso cliente externo, que me ajudou muito a aproximar da realidade do mercado de trabalho. O objetivo deste projeto foi desenvolver um sistema web que otimizasse o controle de processos internos na JJM Log, facilitando a colaboração entre diferentes departamentos e automatizando atividades manuais. A principal meta foi melhorar a integração entre setores e proporcionar uma gestão de demandas mais eficiente e em tempo real."
+            lado='direita'
+          />
+        </div>
 
       </div>
 
