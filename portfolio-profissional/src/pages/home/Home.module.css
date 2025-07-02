@@ -106,6 +106,7 @@ h1,h2,h3,p,span,button {
   flex-direction: column;
   align-items: center;
   margin-top: 40px;
+  gap: 15px;
 }
 
 .habilidades{
@@ -125,8 +126,9 @@ h1,h2,h3,p,span,button {
   border-radius: 10px;
   padding: 20px;
   margin: 10px;
-  width: 340px;
-  height: 260px;
+  max-width: 390px;
+  width: auto;
+  height: auto;
 }
 
 .topoCard{
@@ -147,13 +149,13 @@ h1,h2,h3,p,span,button {
   flex-direction: row;
   width: 100%;
   height: 100%;
-  justify-content: center;
   margin-top: 16px;
-  gap: 30px;
+  
 }
 .conjuntoHabilidades{
+  justify-content: center;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 10px;
   flex-wrap: wrap;
 }
@@ -161,7 +163,11 @@ h1,h2,h3,p,span,button {
 #meusProjetos {
   text-align: left;
 }
-
+.projetos{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
 .titulo {
   color: var(--titulo);
   font-size: 44px;
