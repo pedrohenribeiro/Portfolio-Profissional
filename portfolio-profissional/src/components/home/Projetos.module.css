@@ -9,7 +9,6 @@
     box-sizing: border-box;
     max-width: 100vw;
     width: 100%;
-
     border-radius: 16px;
     transition: 0.5s;
 }
@@ -69,14 +68,14 @@
 
 .titulo {
     color: var(--a);
-    font-size: 32px;
+    font-size: 36px;
     font-weight: 600;
     margin-top: 10px;
     text-align: left;
 }
 
 .periodo {
-    color: var(--periodo);
+    color: var(--verde);
     font-size: 16px;
     font-weight: 400;
     margin-top: 5px;

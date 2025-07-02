@@ -14,7 +14,6 @@ function CardHabilidade({ nome, link}: CardHabilidadeProps) {
         alt={nome} 
         className={styles.iconeHabilidade} 
         />
-        <h3 className={styles.textoHabilidade}>{nome}</h3>
     </div>
   );
 }
