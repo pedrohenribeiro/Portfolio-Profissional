@@ -12,7 +12,7 @@ function Home() {
   
   return (
     <div className={styles.page}>
-      <div className={styles.containerTopo}>
+      <div className={styles.containerTopo} id='home'>
 
 
         <img
@@ -32,7 +32,7 @@ function Home() {
 
       </div>
 
-      <div className={styles.containerSobremim}>
+      <div className={styles.containerSobremim} id="sobremim">
         <h1 className={styles.titulo}>
           Sobre mim
         </h1>
@@ -167,7 +167,7 @@ function Home() {
           <div className={styles.habilidade}>Godot</div>
         </div> */}
 
-      <div className={styles.containerProjetos}>
+      <div className={styles.containerProjetos} id='projetos'>
         <h1 className={styles.titulo} id={styles.meusProjetos}>
           Meus Projetos
         </h1>
