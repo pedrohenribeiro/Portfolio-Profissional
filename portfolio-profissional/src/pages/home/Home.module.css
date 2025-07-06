@@ -31,7 +31,7 @@ h1,h2,h3,p,span,button {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 60px;
+  padding-top: 60px;
 }
 
 .nome {
@@ -89,7 +89,7 @@ h1,h2,h3,p,span,button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 40px;
+  padding-top: 40px;
   padding-left: 10px;
   padding-right: 10px;
 }
@@ -98,14 +98,14 @@ h1,h2,h3,p,span,button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 40px;
+  padding-top: 40px;
 }
 
 .containerHabilidades {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 40px;
+  padding-top: 40px;
   gap: 15px;
 }
 
