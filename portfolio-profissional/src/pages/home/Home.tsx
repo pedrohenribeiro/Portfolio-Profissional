@@ -7,8 +7,20 @@ import recibifyImg from '../../assets/images/recibify.png';
 import githubWhite from '../../assets/images/github.svg';
 import Projetos from '../../components/home/Projetos';
 import CardHabilidade from '../../components/home/CardHabilidade';
+import { useEffect, useState } from 'react';
 
 function Home() {
+  const [activeView, setActiveView] = useState('fullstack'); // 'fullstack' ou 'gamedev'
+
+  const isFullStack = activeView === 'fullstack';
+
+    useEffect(() => {
+    if (activeView === 'gamedev') {
+      document.body.classList.add('gamedev-theme');
+    } else {
+      document.body.classList.remove('gamedev-theme');
+    }
+  }, [activeView]);
   
   return (
     <div className={styles.page}>
@@ -22,7 +34,23 @@ function Home() {
         />
 
         <h1 className={styles.nome}>Pedro Henrique Ribeiro</h1>
-        <h2 className={styles.area}>FullStack</h2>
+
+        <div className={styles.toggleContainer}>
+          <div className={`${styles.togglePill} ${!isFullStack ? styles.activeGameDev : ''}`}></div>
+          <span 
+            className={`${styles.toggleOption} ${isFullStack ? styles.activeText : ''}`}
+            onClick={() => setActiveView('fullstack')}
+          >
+            FullStack
+          </span>
+          <span 
+            className={`${styles.toggleOption} ${!isFullStack ? styles.activeText : ''}`}
+            onClick={() => setActiveView('gamedev')}
+          >
+            GameDev
+          </span>
+        </div>
+
         <p className={styles.texto}>
           Olá, meu nome é Pedro Henrique Ribeiro, tenho 20 anos e atualmente estou cursando o 5º semestre do curso de Análise e Desenvolvimento de Sistemas na Fatec de São José dos Campos.
           Estou em busca da minha primeira oportunidade na área de tecnologia. Tenho muita vontade de aprender, crescer e contribuir com o time. Gosto de encarar desafios e estou sempre buscando evoluir, tanto nas habilidades técnicas quanto nas interpessoais.
@@ -149,23 +177,6 @@ function Home() {
 
         </div>
       </div>
-{/*     <div className={styles.habilidades}>
-          <div className={styles.habilidade}>HTML</div>
-          <div className={styles.habilidade}>CSS</div>
-          <div className={styles.habilidade}>JavaScript</div>
-          <div className={styles.habilidade}>TypeScript</div>
-          <div className={styles.habilidade}>React</div>
-          <div className={styles.habilidade}>React Native</div>
-          <div className={styles.habilidade}>Node.js</div>
-          <div className={styles.habilidade}>Express.js</div>
-          <div className={styles.habilidade}>MongoDB</div>
-          <div className={styles.habilidade}>MySQL</div>
-          <div className={styles.habilidade}>GitHub</div>
-          <div className={styles.habilidade}>Azure</div>
-          <div className={styles.habilidade}>AWS</div>
-          <div className={styles.habilidade}>Google Cloud Platform</div>
-          <div className={styles.habilidade}>Godot</div>
-        </div> */}
 
       <div className={styles.containerProjetos} id='projetos'>
         <h1 className={styles.titulo} id={styles.meusProjetos}>

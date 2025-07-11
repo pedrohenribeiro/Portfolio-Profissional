@@ -43,12 +43,52 @@ h1,h2,h3,p,span,button {
   text-align: center;
 }
 
-.area {
-  color: var(--azul);
-  font-size: 30px;
-  font-weight: 500;
+
+
+.toggleContainer {
+  display: flex;
+  position: relative;
+  align-items: center;
+  background-color: var(--secundaria);
+  border-radius: 25px;
+  padding: 5px;
   margin-top: 10px;
   margin-bottom: 20px;
+  cursor: pointer;
+  border: 1px solid var(--cinza);
+  width: 280px;
+  justify-content: space-around;
+}
+
+.togglePill {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: calc(50% - 5px);
+  height: calc(100% - 10px);
+  background-color: var(--principal);
+  border-radius: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.togglePill.activeGameDev {
+  left: 50%;
+  background-color: #FF6600;
+}
+
+.toggleOption {
+  font-size: 22px;
+  font-weight: 500;
+  color: #888;
+  padding: 10px 20px;
+  z-index: 1;
+  transition: color 0.3s ease-in-out;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.toggleOption.activeText {
+  color: white;
 }
 
 .texto {
