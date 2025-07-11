@@ -35,7 +35,7 @@
 }
 
 .botao:hover {
-    color: var(--azul);
+    color: var(--principal);
     cursor: pointer;
     background-color: var(--navbar-hover);
 
