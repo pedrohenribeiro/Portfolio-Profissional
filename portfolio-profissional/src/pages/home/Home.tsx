@@ -23,16 +23,14 @@ function Home() {
   }, [activeView]);
   
   return (
-    <div className={styles.page}>
-      <div className={styles.containerTopo} id='home'>
-
+    <main className={styles.page}>
+      <header className={styles.containerTopo} id='home'>
 
         <img
           src={foto}
           alt="Foto de perfil"
           className={styles.foto}
         />
-
         <h1 className={styles.nome}>Pedro Henrique Ribeiro</h1>
 
         <div className={styles.toggleContainer}>
@@ -55,12 +53,10 @@ function Home() {
           Olá, meu nome é Pedro Henrique Ribeiro, tenho 20 anos e atualmente estou cursando o 5º semestre do curso de Análise e Desenvolvimento de Sistemas na Fatec de São José dos Campos.
           Estou em busca da minha primeira oportunidade na área de tecnologia. Tenho muita vontade de aprender, crescer e contribuir com o time. Gosto de encarar desafios e estou sempre buscando evoluir, tanto nas habilidades técnicas quanto nas interpessoais.
         </p>
-
         <button className={styles.botao}>Contate-me</button>
+      </header>
 
-      </div>
-
-      <div className={styles.containerSobremim} id="sobremim">
+      <section className={styles.containerSobremim} id="sobremim">
         <h1 className={styles.titulo}>
           Sobre mim
         </h1>
@@ -84,9 +80,9 @@ function Home() {
           Posteriormente, decidi mudar minha direção de estudos e ingressei na Fatec para o curso de Análise e Desenvolvimento de Sistemas, onde me dediquei a vários projetos API (Aprendizagem por Projetos Integrados). Minha ênfase foi no desenvolvimento web, começando com HTML, CSS e JavaScript, evoluindo para React e TypeScript. Além disso, adquiri habilidades em bancos de dados como MySQL e MongoDB, e estou aprofundando meus conhecimentos em nuvem, já possuo o certificado Microsoft Azure-900 Fundamentals e Google Cloud Computing Foundations, estou cursando o AWS Academy Cloud Foundations.
         </p>
 
-      </div>
+      </section>
 
-      <div className={styles.containerHabilidades}>
+      <section className={styles.containerHabilidades}>
         <h1 className={styles.titulo}>
           Habilidades
         </h1>
@@ -210,9 +206,9 @@ function Home() {
           </div>
 
         </div>
-      </div>
+      </section>
 
-      <div className={styles.containerProjetos} id='projetos'>
+      <section className={styles.containerProjetos} id='projetos'>
         <h1 className={styles.titulo} id={styles.meusProjetos}>
           Meus Projetos
         </h1>
@@ -272,9 +268,9 @@ function Home() {
         
 
 
-      </div>
+      </section>
 
-    </div>
+    </main>
   );
 }
 

@@ -2,21 +2,21 @@ import styles from './Projetos.module.css';
 
 function Projetos() {
   return (
-    <div className={styles.page}>
-      <div className={styles.containerIntroducao}>
+    <main className={styles.page}>
+      <section className={styles.containerIntroducao}>
 
-      </div>
-      <div className={styles.containerInformacoes}>
+      </section>
+      <section className={styles.containerInformacoes}>
 
-      </div>
-      <div className={styles.containerContribuicoes}>
+      </section>
+      <section className={styles.containerContribuicoes}>
 
-      </div>
-      <div className={styles.containerAdicionais}>
+      </section>
+      <section className={styles.containerAdicionais}>
 
-      </div>
+      </section>
 
-    </div>
+    </main>
   );
 }
 

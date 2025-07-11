@@ -5,64 +5,70 @@ function Navbar() {
   const navigate = useNavigate();
 
   return (
-    <div className={styles.container}>
-
-      <div className={styles.botoes}>
-        <button
-          className={styles.botao}
-          onClick={() => {
-            if (window.location.pathname !== "/") {
-              navigate("/");
-              setTimeout(() => {
+    <nav className={styles.container}>
+      <ul className={styles.botoes}>
+        <li>
+          <button
+            className={styles.botao}
+            onClick={() => {
+              if (window.location.pathname !== "/") {
+                navigate("/");
+                setTimeout(() => {
+                  const elemento = document.getElementById("home");
+                  if (elemento) elemento.scrollIntoView({ behavior: "smooth" });
+                }, 100);
+              } else {
                 const elemento = document.getElementById("home");
                 if (elemento) elemento.scrollIntoView({ behavior: "smooth" });
-              }, 100);
-            } else {
-              const elemento = document.getElementById("home");
-              if (elemento) elemento.scrollIntoView({ behavior: "smooth" });
-            }
-          }}
-        >
-          Home
-        </button>
-        <button
-          className={styles.botao}
-          onClick={() => {
-            if (window.location.pathname !== "/") {
-              navigate("/");
-              setTimeout(() => {
+              }
+            }}
+          >
+            Home
+          </button>
+        </li>
+        <li>
+          <button
+            className={styles.botao}
+            onClick={() => {
+              if (window.location.pathname !== "/") {
+                navigate("/");
+                setTimeout(() => {
+                  const elemento = document.getElementById("sobremim");
+                  if (elemento) elemento.scrollIntoView({ behavior: "smooth" });
+                }, 100);
+              } else {
                 const elemento = document.getElementById("sobremim");
                 if (elemento) elemento.scrollIntoView({ behavior: "smooth" });
-              }, 100);
-            } else {
-              const elemento = document.getElementById("sobremim");
-              if (elemento) elemento.scrollIntoView({ behavior: "smooth" });
-            }
-          }}
-        >
-          Sobre mim
-        </button>
-        <button
-          className={styles.botao}
-          onClick={() => {
-            if (window.location.pathname !== "/") {
-              navigate("/");
-              setTimeout(() => {
+              }
+            }}
+          >
+            Sobre mim
+          </button>
+        </li>
+        <li>
+          <button
+            className={styles.botao}
+            onClick={() => {
+              if (window.location.pathname !== "/") {
+                navigate("/");
+                setTimeout(() => {
+                  const elemento = document.getElementById("projetos");
+                  if (elemento) elemento.scrollIntoView({ behavior: "smooth" });
+                }, 100);
+              } else {
                 const elemento = document.getElementById("projetos");
                 if (elemento) elemento.scrollIntoView({ behavior: "smooth" });
-              }, 100);
-            } else {
-              const elemento = document.getElementById("projetos");
-              if (elemento) elemento.scrollIntoView({ behavior: "smooth" });
-            }
-          }}
-        >
-          Projetos
-        </button>
-        <button className={styles.botao}>Formações</button>
-      </div>
-
-    </div>
+              }
+            }}
+          >
+            Projetos
+          </button>
+        </li>
+        <li>
+          <button className={styles.botao}>Formações</button>
+        </li>
+      </ul>
+    </nav>
   );
 }
 
