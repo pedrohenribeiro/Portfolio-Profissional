@@ -1,8 +1,22 @@
+import styles from './Projetos.module.css';
+
 function Projetos() {
   return (
-    <div>
-      <h1>Welcome to the Projects Page</h1>
-    </div>
+    <main className={styles.page}>
+      <section className={styles.containerIntroducao}>
+
+      </section>
+      <section className={styles.containerInformacoes}>
+
+      </section>
+      <section className={styles.containerContribuicoes}>
+
+      </section>
+      <section className={styles.containerAdicionais}>
+
+      </section>
+
+    </main>
   );
 }
 

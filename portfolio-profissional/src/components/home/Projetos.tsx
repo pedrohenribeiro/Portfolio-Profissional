@@ -11,15 +11,15 @@ interface ProjetosProps {
 
 function Projetos({ foto, tecnologias, titulo, periodo, texto, lado = 'esquerda' }: ProjetosProps) {
   return (
-    <div className={styles.container}>
+    <article className={styles.container}>
       {lado === 'esquerda' ? (
         <>
           <img className={styles.card} src={foto} alt={titulo} />
-          <div className={styles.descricao}>
-            <div className={styles.infoTopo}>
+          <section className={styles.descricao}>
+            <header className={styles.infoTopo}>
               <h2 className={styles.titulo}>{titulo}</h2>
               <p className={styles.periodo}>{periodo}</p>
-            </div>
+            </header>
             <div className={styles.tecnologias}>
               {tecnologias.map((tec, idx) => (
                 <p className={styles.tecnologia} key={idx}>{tec}</p>
@@ -27,16 +27,16 @@ function Projetos({ foto, tecnologias, titulo, periodo, texto, lado = 'esquerda'
             </div>
             <p className={styles.texto}>{texto}</p>
             <button className={styles.botao}>Veja mais</button>
-          </div>
+          </section>
         </>
       ) : (
         <>
-          <div className={styles.descricao}>
+          <section className={styles.descricao}>
             
-            <div className={styles.infoTopo}>
+            <header className={styles.infoTopo}>
               <h2 className={styles.titulo}>{titulo}</h2>
               <p className={styles.periodo}>{periodo}</p>
-            </div>
+            </header>
             <div className={styles.tecnologias}>
               {tecnologias.map((tec, idx) => (
                 <p className={styles.tecnologia} key={idx}>{tec}</p>
@@ -44,11 +44,11 @@ function Projetos({ foto, tecnologias, titulo, periodo, texto, lado = 'esquerda'
             </div>
             <p className={styles.texto}>{texto}</p>
             <button className={styles.botao}>Veja mais</button>
-          </div>
+          </section>
           <img className={styles.card} src={foto} alt={titulo} />
         </>
       )}
-    </div>
+    </article>
   );
 }
 

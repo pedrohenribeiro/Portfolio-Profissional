@@ -23,7 +23,7 @@ h1,h2,h3,p,span,button {
   height: 280px;
   border-radius: 50%;
   margin-top: 50px;
-  background-color: var(--principal);
+  background-color: var(--primaria);
 }
 
 .containerTopo {
@@ -43,12 +43,52 @@ h1,h2,h3,p,span,button {
   text-align: center;
 }
 
-.area {
-  color: var(--azul);
-  font-size: 30px;
-  font-weight: 500;
+
+
+.toggleContainer {
+  display: flex;
+  position: relative;
+  align-items: center;
+  background-color: var(--secundaria);
+  border-radius: 25px;
+  padding: 5px;
   margin-top: 10px;
   margin-bottom: 20px;
+  cursor: pointer;
+  border: 1px solid var(--cinza);
+  width: 280px;
+  justify-content: space-around;
+}
+
+.togglePill {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: calc(50% - 5px);
+  height: calc(100% - 10px);
+  background-color: var(--principal);
+  border-radius: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.togglePill.activeGameDev {
+  left: 50%;
+  background-color: #FF6600;
+}
+
+.toggleOption {
+  font-size: 22px;
+  font-weight: 500;
+  color: #888;
+  padding: 10px 20px;
+  z-index: 1;
+  transition: color 0.3s ease-in-out;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.toggleOption.activeText {
+  color: white;
 }
 
 .texto {
@@ -63,13 +103,13 @@ h1,h2,h3,p,span,button {
 }
 
 .botao {
-  color: var(--azul-claro);
+  color: var(--principal-claro);
   font-size: 18px;
   font-weight: 500;
   text-decoration: none;
   background-color: transparent;
   background-color: var(--secundaria);
-  border: 2px solid var(--azul-claro);
+  border: 2px solid var(--principal-claro);
   padding: 10px 20px;
   margin-top: 20px;
   max-width: 200px;
@@ -122,7 +162,7 @@ h1,h2,h3,p,span,button {
   background-color: var(--secundaria);
   border-width: 2px;
   border-style: solid;
-  border-color: var(--azul-claro);
+  border-color: var(--principal-claro);
   border-radius: 10px;
   padding: 20px;
   margin: 10px;
@@ -134,7 +174,7 @@ h1,h2,h3,p,span,button {
 .topoCard{
   width: 100%;
   padding: 0px 0px 10px 0px;
-  border-bottom: 2px solid var(--azul-claro);
+  border-bottom: 2px solid var(--principal-claro);
   justify-content: center;
 }
 
@@ -176,7 +216,7 @@ h1,h2,h3,p,span,button {
 }
 
 .subtitulo {
-  color: var(--azul-claro);
+  color: var(--principal-claro);
   font-size: 18px;
   font-weight: 500;
   margin-top: 5px;

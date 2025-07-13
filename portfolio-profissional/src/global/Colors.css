@@ -1,7 +1,8 @@
 
 :root {
-  --principal: #181c27;
-  --principal-hover: #1a1a1a;
+  --primaria: #181c27;
+  --primaria-hover: #1a1a1a;
+  --cinza: #555;
   --secundaria: #191919;
   --terciaria: #202020;
   --navbar: #000000;
@@ -10,9 +11,14 @@
   --texto: #f3f3f3;
   --texto-preto: #000000;
   --periodo: #b3b3b3;
-  --azul: #1586ff;
-  --azul-claro: #4baeff;
+  --principal: #1586ff;
+  --principal-claro: #4baeff;
   --verde: #58cf68;
+}
+
+.gamedev-theme {
+  --principal: #ff3c00;
+  --principal-claro: #FF6600;
 }
 
 ::-webkit-scrollbar {
@@ -21,7 +27,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--azul-claro);
+  background: var(--principal-claro);
   border-radius: 6px;
 }
 
