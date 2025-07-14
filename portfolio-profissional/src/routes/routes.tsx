@@ -5,7 +5,7 @@ import Projetos from '../pages/projetos/Projetos'
 const AppRoutes = () => (
   <Routes>
     <Route path="/" element={<Home />} />
-    <Route path="/projetos" element={<Projetos />} />
+    <Route path="/projetos/:nome/:tipo" element={<Projetos />} />
     
   </Routes>
 );
