@@ -1,5 +1,10 @@
 import styles from './Projetos.module.css';
 import { useParams } from 'react-router-dom';
+import techschoolImg from '../../assets/images/techschool-dark.png';
+import wecolebImg from '../../assets/images/wecoleb.png';
+import dashboardImg from '../../assets/images/dashboard.png';
+import recibifyImg from '../../assets/images/recibify.png';
+import rocketImg from '../../assets/images/rocketBoost.png'
 
 interface ProjetosProps {
   nome: string;
@@ -66,12 +71,12 @@ function Projetos() {
   return (
     <main className={styles.page}>
       <section className={styles.containerIntroducao}>
-        <h1>{projeto?.nome}</h1>
-        <p>{projeto?.descricao}</p>
-        <p>{projeto?.periodo}</p>
-        <p>{projeto?.tecnologias}</p>
-        <p>{projeto?.link}</p>
-        <p>{projeto?.linkGithub}</p>
+        <h1 className={styles.titulo}>{projeto?.nome}</h1>
+        <p className={styles.periodo}>{projeto?.periodo}</p>
+        <p className={styles.descricao}>{projeto?.descricao}</p>
+        <p className={styles.tecnologias}>{projeto?.tecnologias}</p>
+        <p className={styles.link}>{projeto?.link}</p>
+        <p className={styles.github}>{projeto?.linkGithub}</p>
       </section>
       <section className={styles.containerInformacoes}>
 
