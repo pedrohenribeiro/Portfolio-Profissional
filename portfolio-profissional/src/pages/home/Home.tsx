@@ -1,5 +1,5 @@
 import styles from './Home.module.css';
-import foto from '../../assets/images/foto.png';
+import foto from '../../assets/images/imagem-exemplo.png';
 import techschoolImg from '../../assets/images/techschool-dark.png';
 import wecolebImg from '../../assets/images/wecoleb.png';
 import dashboardImg from '../../assets/images/dashboard.png';
@@ -26,35 +26,39 @@ function Home() {
   return (
     <main className={styles.page}>
       <header className={styles.containerTopo} id='home'>
+        <div>
+          <div>
+            <h2 className={styles.boasVindas}>Oi, eu sou o</h2>
+            <h1 className={styles.nome}>Pedro Henrique Ribeiro</h1>
+          </div>
 
+          <div className={styles.toggleContainer}>
+            <div className={`${styles.togglePill} ${!isFullStack ? styles.activeGameDev : ''}`}></div>
+            <span 
+              className={`${styles.toggleOption} ${isFullStack ? styles.activeText : ''}`}
+              onClick={() => setActiveView('fullstack')}
+            >
+              FullStack
+            </span>
+            <span 
+              className={`${styles.toggleOption} ${!isFullStack ? styles.activeText : ''}`}
+              onClick={() => setActiveView('gamedev')}
+            >
+              GameDev
+            </span>
+          </div>
+
+          <p className={styles.texto}>
+            Olá, meu nome é Pedro Henrique Ribeiro, tenho 20 anos e atualmente estou cursando o 5º semestre do curso de Análise e Desenvolvimento de Sistemas na Fatec de São José dos Campos.
+            Estou em busca da minha primeira oportunidade na área de tecnologia. Tenho muita vontade de aprender, crescer e contribuir com o time. Gosto de encarar desafios e estou sempre buscando evoluir, tanto nas habilidades técnicas quanto nas interpessoais.
+          </p>
+          <button className={styles.botao}>Entre em contato</button>
+        </div>
         <img
           src={foto}
           alt="Foto de perfil"
           className={styles.foto}
         />
-        <h1 className={styles.nome}>Pedro Henrique Ribeiro</h1>
-
-        <div className={styles.toggleContainer}>
-          <div className={`${styles.togglePill} ${!isFullStack ? styles.activeGameDev : ''}`}></div>
-          <span 
-            className={`${styles.toggleOption} ${isFullStack ? styles.activeText : ''}`}
-            onClick={() => setActiveView('fullstack')}
-          >
-            FullStack
-          </span>
-          <span 
-            className={`${styles.toggleOption} ${!isFullStack ? styles.activeText : ''}`}
-            onClick={() => setActiveView('gamedev')}
-          >
-            GameDev
-          </span>
-        </div>
-
-        <p className={styles.texto}>
-          Olá, meu nome é Pedro Henrique Ribeiro, tenho 20 anos e atualmente estou cursando o 5º semestre do curso de Análise e Desenvolvimento de Sistemas na Fatec de São José dos Campos.
-          Estou em busca da minha primeira oportunidade na área de tecnologia. Tenho muita vontade de aprender, crescer e contribuir com o time. Gosto de encarar desafios e estou sempre buscando evoluir, tanto nas habilidades técnicas quanto nas interpessoais.
-        </p>
-        <button className={styles.botao}>Contate-me</button>
       </header>
 
       <section className={styles.containerSobremim} id="sobremim">
