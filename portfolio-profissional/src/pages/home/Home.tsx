@@ -1,9 +1,10 @@
 import styles from './Home.module.css';
-import foto from '../../assets/images/foto.png';
+import foto from '../../assets/images/imagem-exemplo.png';
 import techschoolImg from '../../assets/images/techschool-dark.png';
 import wecolebImg from '../../assets/images/wecoleb.png';
 import dashboardImg from '../../assets/images/dashboard.png';
 import recibifyImg from '../../assets/images/recibify.png';
+import rocketImg from '../../assets/images/rocketBoost.png'
 import githubWhite from '../../assets/images/github.svg';
 import Projetos from '../../components/home/Projetos';
 import CardHabilidade from '../../components/home/CardHabilidade';
@@ -25,35 +26,39 @@ function Home() {
   return (
     <main className={styles.page}>
       <header className={styles.containerTopo} id='home'>
+        <div>
+          <div>
+            <h2 className={styles.boasVindas}>Oi, eu sou o</h2>
+            <h1 className={styles.nome}>Pedro Henrique Ribeiro</h1>
+          </div>
 
+          <div className={styles.toggleContainer}>
+            <div className={`${styles.togglePill} ${!isFullStack ? styles.activeGameDev : ''}`}></div>
+            <span 
+              className={`${styles.toggleOption} ${isFullStack ? styles.activeText : ''}`}
+              onClick={() => setActiveView('fullstack')}
+            >
+              FullStack
+            </span>
+            <span 
+              className={`${styles.toggleOption} ${!isFullStack ? styles.activeText : ''}`}
+              onClick={() => setActiveView('gamedev')}
+            >
+              GameDev
+            </span>
+          </div>
+
+          <p className={styles.texto}>
+            Olá, meu nome é Pedro Henrique Ribeiro, tenho 20 anos e atualmente estou cursando o 5º semestre do curso de Análise e Desenvolvimento de Sistemas na Fatec de São José dos Campos.
+            Estou em busca da minha primeira oportunidade na área de tecnologia. Tenho muita vontade de aprender, crescer e contribuir com o time. Gosto de encarar desafios e estou sempre buscando evoluir, tanto nas habilidades técnicas quanto nas interpessoais.
+          </p>
+          <button className={styles.botao}>Entre em contato</button>
+        </div>
         <img
           src={foto}
           alt="Foto de perfil"
           className={styles.foto}
         />
-        <h1 className={styles.nome}>Pedro Henrique Ribeiro</h1>
-
-        <div className={styles.toggleContainer}>
-          <div className={`${styles.togglePill} ${!isFullStack ? styles.activeGameDev : ''}`}></div>
-          <span 
-            className={`${styles.toggleOption} ${isFullStack ? styles.activeText : ''}`}
-            onClick={() => setActiveView('fullstack')}
-          >
-            FullStack
-          </span>
-          <span 
-            className={`${styles.toggleOption} ${!isFullStack ? styles.activeText : ''}`}
-            onClick={() => setActiveView('gamedev')}
-          >
-            GameDev
-          </span>
-        </div>
-
-        <p className={styles.texto}>
-          Olá, meu nome é Pedro Henrique Ribeiro, tenho 20 anos e atualmente estou cursando o 5º semestre do curso de Análise e Desenvolvimento de Sistemas na Fatec de São José dos Campos.
-          Estou em busca da minha primeira oportunidade na área de tecnologia. Tenho muita vontade de aprender, crescer e contribuir com o time. Gosto de encarar desafios e estou sempre buscando evoluir, tanto nas habilidades técnicas quanto nas interpessoais.
-        </p>
-        <button className={styles.botao}>Contate-me</button>
       </header>
 
       <section className={styles.containerSobremim} id="sobremim">
@@ -227,6 +232,7 @@ function Home() {
               texto="📱 Criamos um aplicativo móvel que permite aos usuários registrar reembolsos, anexar comprovantes, incluir descrições e acompanhar o status das solicitações.
               💻 Também desenvolvemos um sistema web corporativo onde os gerentes podem monitorar as despesas e aprovar ou recusar solicitações, tornando o processo muito mais eficiente."
               lado='esquerda'
+              tipo='dev'
             />
             <Projetos
               foto={techschoolImg}
@@ -235,6 +241,7 @@ function Home() {
               periodo="1º Semestre de 2023"
               texto="O desenvolvimento do projeto ocorreu no primeiro semestre do curso, com a direção do professor Antônio Egydio, que simulava ser um cliente externo para aproximar as equipes da realidade do mercado de trabalho. Desenvolver um site informativo, simples e funcional sobre a Metodologia Ágil, contendo conceitos e fundamentos, além de exemplos práticos e um sistema de avaliações para o usuário."
               lado='direita'
+              tipo='dev'
             />
             <Projetos
               foto={dashboardImg}
@@ -243,6 +250,7 @@ function Home() {
               periodo="1º Semestre de 2024"
               texto="O desenvolvimento do projeto ocorreu no terceiro semestre do curso, com a empresa Pro4Tech sendo o nosso cliente externo, que me ajudou muito a aproximar da realidade do mercado de trabalho.O objetivo deste projeto foi criar um dashboard dinâmico e interativo para análise e visualização de dados de vendas. O sistema foi projetado para gerar insights visuais claros e rápidos, permitindo que a Pro4Tech tomasse decisões estratégicas baseadas em dados reais, a principal meta foi facilitar a interpretação de grandes volumes de dados de vendas."
               lado='esquerda'
+              tipo='dev'
             />
             <Projetos
               foto={wecolebImg}
@@ -251,6 +259,7 @@ function Home() {
               periodo="2º Semestre de 2024"
               texto="O desenvolvimento do projeto ocorreu no quarto semestre do curso, com a empresa JJM Log sendo o nosso cliente externo, que me ajudou muito a aproximar da realidade do mercado de trabalho. O objetivo deste projeto foi desenvolver um sistema web que otimizasse o controle de processos internos na JJM Log, facilitando a colaboração entre diferentes departamentos e automatizando atividades manuais. A principal meta foi melhorar a integração entre setores e proporcionar uma gestão de demandas mais eficiente e em tempo real."
               lado='direita'
+              tipo='dev'
             />
 
           </div>
@@ -262,6 +271,7 @@ function Home() {
               titulo="Primeiro Jogo"
               periodo="1º Semestre de 2025"
               texto="Jogo desenvolvido durante o curso da udemy...."
+              tipo='gameDev'
             />
           </div>
         )}
