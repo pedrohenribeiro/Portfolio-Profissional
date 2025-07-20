@@ -5,3 +5,20 @@
   height: 100%;
   background-color: var(--secundaria);
 }
+
+.containerIntroducao {
+  padding-top: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.titulo {
+  font-size: 56px;
+  color: var(--titulo);
+}
+
+.periodo {
+  color: var(--verde);
+}

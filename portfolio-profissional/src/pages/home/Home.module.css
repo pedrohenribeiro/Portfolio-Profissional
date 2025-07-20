@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-
 * {
   padding: 0;
   margin: 0;
@@ -15,35 +14,35 @@ h1,h2,h3,p,span,button {
   flex-direction: column;
   align-items: center;
   height: 100%;
-  background-color: var(--secundaria);
+  background-color: var(--fundo);
 }
 
 .foto {
-  width: 280px;
-  height: 280px;
-  border-radius: 50%;
+  width: 40%;
   margin-top: 50px;
-  background-color: var(--primaria);
 }
 
 .containerTopo {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: left;
   align-items: center;
+  gap: 30px;
   padding-top: 60px;
 }
 
+.boasVindas{
+  color: var(--texto);
+
+}
 .nome {
   color: var(--titulo);
   font-size: 54px;
   font-weight: 600;
-  margin-top: 30px;
+  margin-top: 10px;
   word-break: break-word;
-  text-align: center;
+  text-align: left;
 }
-
-
 
 .toggleContainer {
   display: flex;
