@@ -38,13 +38,13 @@ function Home() {
               className={`${styles.toggleOption} ${isFullStack ? styles.activeText : ''}`}
               onClick={() => setActiveView('fullstack')}
             >
-              FullStack
+              Full-Stack Developer
             </span>
             <span 
               className={`${styles.toggleOption} ${!isFullStack ? styles.activeText : ''}`}
               onClick={() => setActiveView('gamedev')}
             >
-              GameDev
+              Game Developer
             </span>
           </div>
 
@@ -65,9 +65,17 @@ function Home() {
         <h1 className={styles.titulo}>
           Sobre mim
         </h1>
-        <h2 className={styles.subtitulo}>
-          Me conheça melhor
-        </h2>
+        <div>
+          <div>
+            <h4 className={styles.subtitulo}>
+              Minha trajetória na tecnologia  
+            </h4>
+            <p>
+              Primeiro contato com programação (C++ na Unreal Engine 3.5) e modelagem 3D com 3DMax.
+            </p>
+          </div>
+          <p className={styles.periodo}> 2016</p>
+        </div>
 
         <p className={styles.texto}>
           Eu sempre fui apaixonado por tecnologia, eu gostava muito de jogar no video game e no computador, então no meio do ensino fundamental, em 2016 eu comecei a estudar Game Design na Microcamp, tive meu primeiro contato com uma linguagem de programação com c++ na Unreal Engine 3.5. Minha parte favorita na época era modelagem 3D no 3DMax. Em 2018 quando terminei o curso e comecei a fazer outros 2 cursos em focados para Game Design na Advanced e Saga, finalizei o curso da advanced mas precisei sair do curso da Saga, nesse mesmo período (2017) também iniciei o curso Hardware e Robótica na Microcamp, onde me apaixonei por IOT(Inteligência das coisas), finalizei o curso em 2018.
