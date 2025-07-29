@@ -38,13 +38,13 @@ function Home() {
               className={`${styles.toggleOption} ${isFullStack ? styles.activeText : ''}`}
               onClick={() => setActiveView('fullstack')}
             >
-              FullStack
+              Full-Stack Developer
             </span>
             <span 
               className={`${styles.toggleOption} ${!isFullStack ? styles.activeText : ''}`}
               onClick={() => setActiveView('gamedev')}
             >
-              GameDev
+              Game Developer
             </span>
           </div>
 
@@ -65,21 +65,21 @@ function Home() {
         <h1 className={styles.titulo}>
           Sobre mim
         </h1>
-        <h2 className={styles.subtitulo}>
-          Me conheça melhor
-        </h2>
+        <div>
+          <div>
+            <h4 className={styles.subtitulo}>
+              Minha trajetória na tecnologia  
+            </h4>
+            <p>
+              Primeiro contato com programação (C++ na Unreal Engine 3.5) e modelagem 3D com 3DMax.
+            </p>
+          </div>
+          <p className={styles.periodo}> 2016</p>
+        </div>
 
         <p className={styles.texto}>
           Eu sempre fui apaixonado por tecnologia, eu gostava muito de jogar no video game e no computador, então no meio do ensino fundamental, em 2016 eu comecei a estudar Game Design na Microcamp, tive meu primeiro contato com uma linguagem de programação com c++ na Unreal Engine 3.5. Minha parte favorita na época era modelagem 3D no 3DMax. Em 2018 quando terminei o curso e comecei a fazer outros 2 cursos em focados para Game Design na Advanced e Saga, finalizei o curso da advanced mas precisei sair do curso da Saga, nesse mesmo período (2017) também iniciei o curso Hardware e Robótica na Microcamp, onde me apaixonei por IOT(Inteligência das coisas), finalizei o curso em 2018.
         </p>
-
-        {/*         <p className={styles.texto}>
-          Em 2019, participei do Empreende19, uma feira para alunos de escolas públicas de SJC, apresentando o MaxClean, uma torneira tecnológica que dispunha de sensores para controlar água e sabão, além de LEDs indicadores de nível de sabão, sendo responsável pela parte eletrônica e codificação.
-        </p>
-
-        <p className={styles.texto}>
-          Obtive uma bolsa integral e comecei a estudar Eletrônica na Univap Centro em 2020, onde realizei diversos projetos e aprofundei meu conhecimento em programação C++. Em 2022, concluí meu TCC com um robô de inspeção de tubulações, controlado remotamente por um aplicativo com câmera, lanterna e sensores de gás para detecção de vazamentos, resultando na minha primeira patente.
-        </p> */}
 
         <p className={styles.texto}>
           Posteriormente, decidi mudar minha direção de estudos e ingressei na Fatec para o curso de Análise e Desenvolvimento de Sistemas, onde me dediquei a vários projetos API (Aprendizagem por Projetos Integrados). Minha ênfase foi no desenvolvimento web, começando com HTML, CSS e JavaScript, evoluindo para React e TypeScript. Além disso, adquiri habilidades em bancos de dados como MySQL e MongoDB, e estou aprofundando meus conhecimentos em nuvem, já possuo o certificado Microsoft Azure-900 Fundamentals e Google Cloud Computing Foundations, estou cursando o AWS Academy Cloud Foundations.
@@ -206,7 +206,6 @@ function Home() {
                 </div>
               )}
               
-
             </div>
           </div>
 
@@ -275,8 +274,6 @@ function Home() {
             />
           </div>
         )}
-        
-
 
       </section>
 

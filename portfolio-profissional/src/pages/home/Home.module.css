@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-
 * {
   padding: 0;
   margin: 0;
@@ -45,8 +44,6 @@ h1,h2,h3,p,span,button {
   text-align: left;
 }
 
-
-
 .toggleContainer {
   display: flex;
   position: relative;
@@ -58,7 +55,7 @@ h1,h2,h3,p,span,button {
   margin-bottom: 20px;
   cursor: pointer;
   border: 1px solid var(--cinza);
-  width: 280px;
+  width: 400px;
   justify-content: space-around;
 }
 
@@ -79,7 +76,7 @@ h1,h2,h3,p,span,button {
 }
 
 .toggleOption {
-  font-size: 22px;
+  font-size: 19px;
   font-weight: 500;
   color: #888;
   padding: 10px 20px;
