@@ -216,9 +216,6 @@ function Home() {
         <h1 className={styles.titulo} id={styles.meusProjetos}>
           Meus Projetos
         </h1>
-        <h2 className={styles.subtitulo}>
-          Confira alguns dos meus projetos
-        </h2>
 
         {isFullStack ? (
           <div className={styles.projetos}>
