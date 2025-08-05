@@ -65,12 +65,10 @@ function Home() {
         <h1 className={styles.titulo}>
           Sobre mim
         </h1>
-        <div>
-          <div>
-            <h4 className={styles.subtitulo}>
-              Minha trajetória na tecnologia  
-            </h4>
-            <p>
+        <div className={styles.periodoContainer}>
+          <div className={styles.periodoInfo}>
+            <p className={styles.periodoTitulo}>Game Design na Microcamp </p>
+            <p className={styles.periodoTexto}>
               Primeiro contato com programação (C++ na Unreal Engine 3.5) e modelagem 3D com 3DMax.
             </p>
           </div>
