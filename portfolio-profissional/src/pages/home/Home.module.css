@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
+
 * {
   padding: 0;
   margin: 0;
@@ -14,35 +15,35 @@ h1,h2,h3,p,span,button {
   flex-direction: column;
   align-items: center;
   height: 100%;
-  background-color: var(--fundo);
+  background-color: var(--secundaria);
 }
 
 .foto {
-  width: 40%;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
   margin-top: 50px;
+  background-color: var(--primaria);
 }
 
 .containerTopo {
   display: flex;
-  flex-direction: row;
-  justify-content: left;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  gap: 30px;
   padding-top: 60px;
 }
 
-.boasVindas{
-  color: var(--texto);
-
-}
 .nome {
   color: var(--titulo);
   font-size: 54px;
   font-weight: 600;
-  margin-top: 10px;
+  margin-top: 30px;
   word-break: break-word;
-  text-align: left;
+  text-align: center;
 }
+
+
 
 .toggleContainer {
   display: flex;
@@ -55,7 +56,7 @@ h1,h2,h3,p,span,button {
   margin-bottom: 20px;
   cursor: pointer;
   border: 1px solid var(--cinza);
-  width: 400px;
+  width: 280px;
   justify-content: space-around;
 }
 
@@ -76,7 +77,7 @@ h1,h2,h3,p,span,button {
 }
 
 .toggleOption {
-  font-size: 19px;
+  font-size: 22px;
   font-weight: 500;
   color: #888;
   padding: 10px 20px;
