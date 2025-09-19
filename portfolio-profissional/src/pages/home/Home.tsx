@@ -254,7 +254,7 @@ function Home() {
         ) : (
           <div className={styles.projetos}>
             <Projetos
-              foto={recibifyImg}
+              foto={rocketImg}
               tecnologias={['Unity', 'C#']}
               titulo="Primeiro Jogo"
               periodo="1º Semestre de 2025"
