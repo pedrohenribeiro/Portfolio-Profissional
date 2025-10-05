@@ -65,21 +65,19 @@ function Home() {
         <h1 className={styles.titulo}>
           Sobre mim
         </h1>
-        <div>
-          <div>
-            <h4 className={styles.subtitulo}>
-              Minha trajetória na tecnologia  
-            </h4>
-            <p>
+        <div className={styles.periodoContainer}>
+          <div className={styles.periodoInfo}>
+            <p className={styles.periodoTitulo}>Game Design na Microcamp </p>
+            <p className={styles.periodoTexto}>
               Primeiro contato com programação (C++ na Unreal Engine 3.5) e modelagem 3D com 3DMax.
             </p>
           </div>
           <p className={styles.periodo}> 2016</p>
         </div>
 
-        <p className={styles.texto}>
+ {/*        <p className={styles.texto}>
           Eu sempre fui apaixonado por tecnologia, eu gostava muito de jogar no video game e no computador, então no meio do ensino fundamental, em 2016 eu comecei a estudar Game Design na Microcamp, tive meu primeiro contato com uma linguagem de programação com c++ na Unreal Engine 3.5. Minha parte favorita na época era modelagem 3D no 3DMax. Em 2018 quando terminei o curso e comecei a fazer outros 2 cursos em focados para Game Design na Advanced e Saga, finalizei o curso da advanced mas precisei sair do curso da Saga, nesse mesmo período (2017) também iniciei o curso Hardware e Robótica na Microcamp, onde me apaixonei por IOT(Inteligência das coisas), finalizei o curso em 2018.
-        </p>
+        </p> */}
 
         <p className={styles.texto}>
           Posteriormente, decidi mudar minha direção de estudos e ingressei na Fatec para o curso de Análise e Desenvolvimento de Sistemas, onde me dediquei a vários projetos API (Aprendizagem por Projetos Integrados). Minha ênfase foi no desenvolvimento web, começando com HTML, CSS e JavaScript, evoluindo para React e TypeScript. Além disso, adquiri habilidades em bancos de dados como MySQL e MongoDB, e estou aprofundando meus conhecimentos em nuvem, já possuo o certificado Microsoft Azure-900 Fundamentals e Google Cloud Computing Foundations, estou cursando o AWS Academy Cloud Foundations.
@@ -216,9 +214,6 @@ function Home() {
         <h1 className={styles.titulo} id={styles.meusProjetos}>
           Meus Projetos
         </h1>
-        <h2 className={styles.subtitulo}>
-          Confira alguns dos meus projetos
-        </h2>
 
         {isFullStack ? (
           <div className={styles.projetos}>
