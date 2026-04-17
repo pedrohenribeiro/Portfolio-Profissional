@@ -9,6 +9,7 @@ import githubWhite from '../../assets/images/github.svg';
 import Projetos from '../../components/home/Projetos';
 import CardHabilidade from '../../components/home/CardHabilidade';
 import { useEffect, useState } from 'react';
+import Footer from '../../components/footer/Footer';
 
 function Home() {
   const [activeView, setActiveView] = useState('fullstack'); // 'fullstack' ou 'gamedev'
@@ -23,6 +24,15 @@ function Home() {
     }
   }, [activeView]);
   
+
+  const scrollParaContatos = () => {
+    const secaoContatos = document.getElementById('contatos');
+    if (secaoContatos) {
+      secaoContatos.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+
   return (
     <main className={styles.page}>
       <header className={styles.containerTopo} id='home'>
@@ -51,10 +61,10 @@ function Home() {
         </div>
 
         <p className={styles.texto}>
-          Olá, meu nome é Pedro Henrique Ribeiro, tenho 20 anos e atualmente estou cursando o 5º semestre do curso de Análise e Desenvolvimento de Sistemas na Fatec de São José dos Campos.
-          Estou em busca da minha primeira oportunidade na área de tecnologia. Tenho muita vontade de aprender, crescer e contribuir com o time. Gosto de encarar desafios e estou sempre buscando evoluir, tanto nas habilidades técnicas quanto nas interpessoais.
+          Olá, meu nome é Pedro Henrique Ribeiro, tenho 21 anos e atualmente estou cursando o 6º semestre do curso de Análise e Desenvolvimento de Sistemas na Fatec de São José dos Campos.
+          Estou em busca de oportunidades na área de tecnologia.
         </p>
-        <button className={styles.botao}>Contate-me</button>
+        <button className={styles.botao} onClick={scrollParaContatos}>Contate-me</button>
       </header>
 
       <section className={styles.containerSobremim} id="sobremim">
@@ -64,19 +74,11 @@ function Home() {
         <h2 className={styles.subtitulo}>
           Me conheça melhor
         </h2>
-        <div className={styles.periodoContainer}>
-          <div className={styles.periodoInfo}>
-            <p className={styles.periodoTitulo}>Game Design na Microcamp </p>
-            <p className={styles.periodoTexto}>
-              Primeiro contato com programação (C++ na Unreal Engine 3.5) e modelagem 3D com 3DMax.
-            </p>
-          </div>
-          <p className={styles.periodo}> 2016</p>
-        </div>
 
- {/*        <p className={styles.texto}>
+
+        <p className={styles.texto}>
           Eu sempre fui apaixonado por tecnologia, eu gostava muito de jogar no video game e no computador, então no meio do ensino fundamental, em 2016 eu comecei a estudar Game Design na Microcamp, tive meu primeiro contato com uma linguagem de programação com c++ na Unreal Engine 3.5. Minha parte favorita na época era modelagem 3D no 3DMax. Em 2018 quando terminei o curso e comecei a fazer outros 2 cursos em focados para Game Design na Advanced e Saga, finalizei o curso da advanced mas precisei sair do curso da Saga, nesse mesmo período (2017) também iniciei o curso Hardware e Robótica na Microcamp, onde me apaixonei por IOT(Inteligência das coisas), finalizei o curso em 2018.
-        </p> */}
+        </p>
 
         <p className={styles.texto}>
           Posteriormente, decidi mudar minha direção de estudos e ingressei na Fatec para o curso de Análise e Desenvolvimento de Sistemas, onde me dediquei a vários projetos API (Aprendizagem por Projetos Integrados). Minha ênfase foi no desenvolvimento web, começando com HTML, CSS e JavaScript, evoluindo para React e TypeScript. Além disso, adquiri habilidades em bancos de dados como MySQL e MongoDB, e estou aprofundando meus conhecimentos em nuvem, já possuo o certificado Microsoft Azure-900 Fundamentals e Google Cloud Computing Foundations, estou cursando o AWS Academy Cloud Foundations.
@@ -271,6 +273,9 @@ function Home() {
         )}
 
       </section>
+
+      <section id='contatos'/>
+      <Footer />
 
     </main>
   );

@@ -1,15 +1,5 @@
 import styles from './Projetos.module.css';
 import { useParams } from 'react-router-dom';
-import techschoolImg from '../../assets/images/techschool-dark.png';
-import wecolebImg from '../../assets/images/wecoleb.png';
-import dashboardImg from '../../assets/images/dashboard.png';
-import recibifyImg from '../../assets/images/recibify.png';
-import rocketImg from '../../assets/images/rocketBoost.png'
-
-interface ProjetosProps {
-  nome: string;
-  tipo: string;
-}
 
 function Projetos() {
   const { nome, tipo } = useParams<{ nome: string; tipo: string }>();
