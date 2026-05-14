@@ -1,5 +1,5 @@
 import styles from './Projetos.module.css';
-/* import { useNavigate } from 'react-router-dom'; */
+import { useNavigate } from 'react-router-dom';
 
 interface ProjetosProps {
   foto: string;
@@ -11,9 +11,9 @@ interface ProjetosProps {
   tipo?: 'dev' | 'gameDev';
 }
 
-function Projetos({ foto, tecnologias, titulo, periodo, texto, lado = 'esquerda', /* tipo */ }: ProjetosProps) {
-  /* const navigate = useNavigate(); */
-  
+function Projetos({ foto, tecnologias, titulo, periodo, texto, lado = 'esquerda', tipo = 'dev' }: ProjetosProps) {
+  const navigate = useNavigate();
+
   return (
     <article className={styles.container}>
       {lado === 'esquerda' ? (
@@ -30,13 +30,17 @@ function Projetos({ foto, tecnologias, titulo, periodo, texto, lado = 'esquerda'
               ))}
             </div>
             <p className={styles.texto}>{texto}</p>
-            <button className={styles.botao} onClick={() => alert(`Ferramenta em construção!`)}>Veja mais</button>
+            <button
+              className={styles.botao}
+              onClick={() => navigate(`/projetos/${encodeURIComponent(titulo)}/${tipo}`)}
+            >
+              Veja mais
+            </button>
           </section>
         </>
       ) : (
         <>
           <section className={styles.descricao}>
-            
             <header className={styles.infoTopo}>
               <h2 className={styles.titulo}>{titulo}</h2>
               <p className={styles.periodo}>{periodo}</p>
@@ -47,7 +51,12 @@ function Projetos({ foto, tecnologias, titulo, periodo, texto, lado = 'esquerda'
               ))}
             </div>
             <p className={styles.texto}>{texto}</p>
-            <button className={styles.botao} onClick={() => alert(`Ferramenta em construção!`)}>Veja mais</button>
+            <button
+              className={styles.botao}
+              onClick={() => navigate(`/projetos/${encodeURIComponent(titulo)}/${tipo}`)}
+            >
+              Veja mais
+            </button>
           </section>
           <img className={styles.card} src={foto} alt={titulo} />
         </>

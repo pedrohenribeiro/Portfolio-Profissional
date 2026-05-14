@@ -18,12 +18,21 @@ h1,h2,h3,p,span,button {
   background-color: var(--secundaria);
 }
 
+.fotoWrapper {
+  margin-top: 50px;
+  position: relative;
+  display: inline-block;
+  border-radius: 50%;
+  padding: 4px;
+  background: linear-gradient(135deg, var(--principal-claro), var(--principal), transparent);
+}
+
 .foto {
   width: 280px;
   height: 280px;
   border-radius: 50%;
-  margin-top: 50px;
   background-color: var(--primaria);
+  display: block;
 }
 
 .containerTopo {
@@ -38,9 +47,19 @@ h1,h2,h3,p,span,button {
   color: var(--titulo);
   font-size: 54px;
   font-weight: 600;
-  margin-top: 30px;
+  margin-top: 20px;
   word-break: break-word;
   text-align: center;
+}
+
+.subtituloHero {
+  color: var(--principal-claro);
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-top: 6px;
+  margin-bottom: 4px;
 }
 
 
@@ -144,21 +163,21 @@ h1,h2,h3,p,span,button {
   font-weight: 500;
   text-decoration: none;
   background-color: transparent;
-  background-color: var(--secundaria);
   border: 2px solid var(--principal-claro);
-  padding: 10px 20px;
+  padding: 12px 32px;
   margin-top: 20px;
-  max-width: 200px;
   border-radius: 18px;
-  transition: 0.5s;
+  transition: all 0.3s;
+  cursor: pointer;
 }
 
 .botao:hover {
-  border-width: 2px solid;
-  border-color: var(--titulo);
-  color: var(--titulo);
-  transition: 0.5s;
+  background-color: var(--principal);
+  border-color: var(--principal);
+  color: white;
+  transition: all 0.3s;
   transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(21, 134, 255, 0.3);
 }
 
 .containerSobremim {
@@ -270,6 +289,11 @@ h1,h2,h3,p,span,button {
     font-size: 44px;
   }
 
+  .subtituloHero {
+    font-size: 14px;
+    letter-spacing: 1.5px;
+  }
+
   .area {
     font-size: 28px;
   }
@@ -284,6 +308,15 @@ h1,h2,h3,p,span,button {
 
   .texto {
     font-size: 16px;
+  }
+
+  .fotoWrapper {
+    padding: 3px;
+  }
+
+  .foto {
+    width: 220px;
+    height: 220px;
   }
 }
 
