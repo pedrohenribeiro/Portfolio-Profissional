@@ -11,8 +11,9 @@ interface ProjetosProps {
   tipo?: 'dev' | 'gameDev';
 }
 
-function Projetos({ foto, tecnologias, titulo, periodo, texto, lado = 'esquerda', tipo }: ProjetosProps) {
+function Projetos({ foto, tecnologias, titulo, periodo, texto, lado = 'esquerda', tipo = 'dev' }: ProjetosProps) {
   const navigate = useNavigate();
+
   return (
     <article className={styles.container}>
       {lado === 'esquerda' ? (
@@ -29,13 +30,17 @@ function Projetos({ foto, tecnologias, titulo, periodo, texto, lado = 'esquerda'
               ))}
             </div>
             <p className={styles.texto}>{texto}</p>
-            <button className={styles.botao} onClick={() => navigate(`/projetos/${titulo}/${tipo}`)}>Veja mais</button>
+            <button
+              className={styles.botao}
+              onClick={() => navigate(`/projetos/${encodeURIComponent(titulo)}/${tipo}`)}
+            >
+              Veja mais
+            </button>
           </section>
         </>
       ) : (
         <>
           <section className={styles.descricao}>
-            
             <header className={styles.infoTopo}>
               <h2 className={styles.titulo}>{titulo}</h2>
               <p className={styles.periodo}>{periodo}</p>
@@ -46,7 +51,12 @@ function Projetos({ foto, tecnologias, titulo, periodo, texto, lado = 'esquerda'
               ))}
             </div>
             <p className={styles.texto}>{texto}</p>
-            <button className={styles.botao} onClick={() => navigate(`/projetos/${titulo}/${tipo}`)}>Veja mais</button>
+            <button
+              className={styles.botao}
+              onClick={() => navigate(`/projetos/${encodeURIComponent(titulo)}/${tipo}`)}
+            >
+              Veja mais
+            </button>
           </section>
           <img className={styles.card} src={foto} alt={titulo} />
         </>
