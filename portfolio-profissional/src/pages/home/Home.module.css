@@ -64,6 +64,8 @@ h1,h2,h3,p,span,button {
 
 
 
+/* Slider FullStack/GameDev — oculto enquanto MOSTRAR_GAMEDEV for false
+   (ver src/config/features.ts). Estilos mantidos para reativação. */
 .toggleContainer {
   display: flex;
   position: relative;
@@ -108,6 +110,33 @@ h1,h2,h3,p,span,button {
 
 .toggleOption.activeText {
   color: white;
+}
+
+.especialidades {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 14px;
+  margin-bottom: 10px;
+}
+
+.especialidade {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--titulo);
+  background-color: transparent;
+  border: 1px solid var(--principal-claro);
+  border-radius: 999px;
+  padding: 10px 28px;
+  letter-spacing: 0.5px;
+}
+
+.especialidadeIa {
+  background: var(--principal);
+  border-color: var(--principal);
 }
 
 .texto {
@@ -162,22 +191,20 @@ h1,h2,h3,p,span,button {
   font-size: 18px;
   font-weight: 500;
   text-decoration: none;
-  background-color: transparent;
+  background-color: var(--secundaria);
   border: 2px solid var(--principal-claro);
-  padding: 12px 32px;
+  padding: 10px 20px;
   margin-top: 20px;
   border-radius: 18px;
-  transition: all 0.3s;
+  transition: 0.5s;
   cursor: pointer;
 }
 
 .botao:hover {
-  background-color: var(--principal);
-  border-color: var(--principal);
-  color: white;
-  transition: all 0.3s;
+  border-color: var(--titulo);
+  color: var(--titulo);
+  transition: 0.5s;
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(21, 134, 255, 0.3);
 }
 
 .containerSobremim {
@@ -208,6 +235,8 @@ h1,h2,h3,p,span,button {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: center;
 }
 
 .cardHabilidades {
@@ -255,6 +284,52 @@ h1,h2,h3,p,span,button {
   flex-wrap: wrap;
 }
 
+.listaIa {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.grupoIa {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px 0;
+  text-align: left;
+}
+
+.grupoIa:first-child {
+  padding-top: 0;
+}
+
+.grupoIa:last-child {
+  padding-bottom: 0;
+}
+
+.grupoIa + .grupoIa {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.grupoIaLabel {
+  color: var(--periodo);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+}
+
+.grupoIaItens {
+  color: var(--texto);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+.separadorIa {
+  color: var(--principal-claro);
+  padding: 0 8px;
+}
+
 #meusProjetos {
   text-align: left;
 }
@@ -292,6 +367,11 @@ h1,h2,h3,p,span,button {
   .subtituloHero {
     font-size: 14px;
     letter-spacing: 1.5px;
+  }
+
+  .especialidade {
+    font-size: 16px;
+    padding: 8px 20px;
   }
 
   .area {

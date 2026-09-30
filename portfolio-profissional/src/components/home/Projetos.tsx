@@ -14,51 +14,40 @@ interface ProjetosProps {
 function Projetos({ foto, tecnologias, titulo, periodo, texto, lado = 'esquerda', tipo = 'dev' }: ProjetosProps) {
   const navigate = useNavigate();
 
+  const imagem = <img className={styles.card} src={foto} alt={titulo} />;
+
+  const descricao = (
+    <section className={styles.descricao}>
+      <header className={styles.infoTopo}>
+        <h2 className={styles.titulo}>{titulo}</h2>
+        <p className={styles.periodo}>{periodo}</p>
+      </header>
+      <div className={styles.tecnologias}>
+        {tecnologias.map((tec, idx) => (
+          <p className={styles.tecnologia} key={idx}>{tec}</p>
+        ))}
+      </div>
+      <p className={styles.texto}>{texto}</p>
+      <button
+        className={styles.botao}
+        onClick={() => navigate(`/projetos/${encodeURIComponent(titulo)}/${tipo}`)}
+      >
+        Veja mais
+      </button>
+    </section>
+  );
+
   return (
     <article className={styles.container}>
       {lado === 'esquerda' ? (
         <>
-          <img className={styles.card} src={foto} alt={titulo} />
-          <section className={styles.descricao}>
-            <header className={styles.infoTopo}>
-              <h2 className={styles.titulo}>{titulo}</h2>
-              <p className={styles.periodo}>{periodo}</p>
-            </header>
-            <div className={styles.tecnologias}>
-              {tecnologias.map((tec, idx) => (
-                <p className={styles.tecnologia} key={idx}>{tec}</p>
-              ))}
-            </div>
-            <p className={styles.texto}>{texto}</p>
-            <button
-              className={styles.botao}
-              onClick={() => navigate(`/projetos/${encodeURIComponent(titulo)}/${tipo}`)}
-            >
-              Veja mais
-            </button>
-          </section>
+          {imagem}
+          {descricao}
         </>
       ) : (
         <>
-          <section className={styles.descricao}>
-            <header className={styles.infoTopo}>
-              <h2 className={styles.titulo}>{titulo}</h2>
-              <p className={styles.periodo}>{periodo}</p>
-            </header>
-            <div className={styles.tecnologias}>
-              {tecnologias.map((tec, idx) => (
-                <p className={styles.tecnologia} key={idx}>{tec}</p>
-              ))}
-            </div>
-            <p className={styles.texto}>{texto}</p>
-            <button
-              className={styles.botao}
-              onClick={() => navigate(`/projetos/${encodeURIComponent(titulo)}/${tipo}`)}
-            >
-              Veja mais
-            </button>
-          </section>
-          <img className={styles.card} src={foto} alt={titulo} />
+          {descricao}
+          {imagem}
         </>
       )}
     </article>

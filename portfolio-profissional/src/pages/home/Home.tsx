@@ -11,9 +11,30 @@ import Projetos from '../../components/home/Projetos';
 import CardHabilidade from '../../components/home/CardHabilidade';
 import { useEffect, useState } from 'react';
 import Footer from '../../components/footer/Footer';
+import { MOSTRAR_GAMEDEV } from '../../config/features';
+
+const habilidadesIa = [
+  {
+    grupo: 'Técnicas',
+    itens: ['RAG', 'Embeddings', 'Chunking', 'Tool Calling', 'Prompt Engineering'],
+  },
+  {
+    grupo: 'Modelos e ferramentas',
+    itens: ['Google Gemini', 'ChromaDB', 'Python', 'Flask'],
+  },
+  {
+    grupo: 'Aplicações',
+    itens: ['Agentes conversacionais', 'Busca semântica', 'Assistentes com base de conhecimento'],
+  },
+];
+
+const habilidadesJogos = [
+  { nome: 'Unity', link: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg' },
+  { nome: 'Godot', link: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/godot/godot-original.svg' },
+];
 
 function Home() {
-  const [activeView, setActiveView] = useState('fullstack');
+  const [activeView, setActiveView] = useState<'fullstack' | 'gamedev'>('fullstack');
 
   const isFullStack = activeView === 'fullstack';
 
@@ -46,28 +67,36 @@ function Home() {
 
         <h1 className={styles.nome}>Pedro Henrique Ribeiro</h1>
         <p className={styles.subtituloHero}>
-          {isFullStack ? 'Desenvolvedor Full Stack' : 'Game Developer'}
+          {isFullStack ? 'Desenvolvedor Full Stack e AI Builder' : 'Game Developer'}
         </p>
 
-        <div className={styles.toggleContainer}>
-          <div className={`${styles.togglePill} ${!isFullStack ? styles.activeGameDev : ''}`}></div>
-          <span
-            className={`${styles.toggleOption} ${isFullStack ? styles.activeText : ''}`}
-            onClick={() => setActiveView('fullstack')}
-          >
-            FullStack
-          </span>
-          <span
-            className={`${styles.toggleOption} ${!isFullStack ? styles.activeText : ''}`}
-            onClick={() => setActiveView('gamedev')}
-          >
-            GameDev
-          </span>
-        </div>
+        {MOSTRAR_GAMEDEV ? (
+          <div className={styles.toggleContainer}>
+            <div className={`${styles.togglePill} ${!isFullStack ? styles.activeGameDev : ''}`}></div>
+            <span
+              className={`${styles.toggleOption} ${isFullStack ? styles.activeText : ''}`}
+              onClick={() => setActiveView('fullstack')}
+            >
+              FullStack
+            </span>
+            <span
+              className={`${styles.toggleOption} ${!isFullStack ? styles.activeText : ''}`}
+              onClick={() => setActiveView('gamedev')}
+            >
+              GameDev
+            </span>
+          </div>
+        ) : (
+          <div className={styles.especialidades}>
+            <span className={styles.especialidade}>Full Stack</span>
+            <span className={`${styles.especialidade} ${styles.especialidadeIa}`}>AI Builder</span>
+          </div>
+        )}
 
         <p className={styles.texto}>
           Olá, meu nome é Pedro Henrique Ribeiro, tenho 21 anos e atualmente estou cursando o 6º semestre do curso de Análise e Desenvolvimento de Sistemas na Fatec de São José dos Campos.
-          Estou em busca de oportunidades na área de tecnologia.
+          Desenvolvo aplicações web full stack e, hoje, meu foco é a construção de agentes de IA generativa — RAG, integração de ferramentas e LLMs aplicados a produtos reais.
+          Estou em busca de oportunidades na área de Inteligência Artificial.
         </p>
         <button className={styles.botao} onClick={scrollParaContatos}>Contate-me</button>
       </header>
@@ -80,12 +109,22 @@ function Home() {
           Me conheça melhor
         </h2>
 
+        {MOSTRAR_GAMEDEV ? (
+          <p className={styles.texto}>
+            Eu sempre fui apaixonado por tecnologia, eu gostava muito de jogar no video game e no computador, então no meio do ensino fundamental, em 2016 eu comecei a estudar Game Design na Microcamp, tive meu primeiro contato com uma linguagem de programação com c++ na Unreal Engine 3.5. Minha parte favorita na época era modelagem 3D no 3DMax. Em 2018 quando terminei o curso e comecei a fazer outros 2 cursos em focados para Game Design na Advanced e Saga, finalizei o curso da advanced mas precisei sair do curso da Saga, nesse mesmo período (2017) também iniciei o curso Hardware e Robótica na Microcamp, onde me apaixonei por IOT(Inteligência das coisas), finalizei o curso em 2018.
+          </p>
+        ) : (
+          <p className={styles.texto}>
+            Eu sempre fui apaixonado por tecnologia. Meu primeiro contato com uma linguagem de programação foi ainda no ensino fundamental, com C++, e em 2017 iniciei o curso de Hardware e Robótica na Microcamp, onde me apaixonei por IOT (Inteligência das coisas), finalizando o curso em 2018.
+          </p>
+        )}
+
         <p className={styles.texto}>
-          Eu sempre fui apaixonado por tecnologia, eu gostava muito de jogar no video game e no computador, então no meio do ensino fundamental, em 2016 eu comecei a estudar Game Design na Microcamp, tive meu primeiro contato com uma linguagem de programação com c++ na Unreal Engine 3.5. Minha parte favorita na época era modelagem 3D no 3DMax. Em 2018 quando terminei o curso e comecei a fazer outros 2 cursos em focados para Game Design na Advanced e Saga, finalizei o curso da advanced mas precisei sair do curso da Saga, nesse mesmo período (2017) também iniciei o curso Hardware e Robótica na Microcamp, onde me apaixonei por IOT(Inteligência das coisas), finalizei o curso em 2018.
+          Posteriormente, decidi mudar minha direção de estudos e ingressei na Fatec para o curso de Análise e Desenvolvimento de Sistemas, onde me dediquei a vários projetos API (Aprendizagem por Projetos Integrados). Minha ênfase foi no desenvolvimento web, começando com HTML, CSS e JavaScript, evoluindo para React e TypeScript. Além disso, adquiri habilidades em bancos de dados como MySQL, PostgreSQL e MongoDB, e estou aprofundando meus conhecimentos em nuvem, já possuo o certificado Microsoft Azure-900 Fundamentals e Google Cloud Computing Foundations, estou cursando o AWS Academy Cloud Foundations.
         </p>
 
         <p className={styles.texto}>
-          Posteriormente, decidi mudar minha direção de estudos e ingressei na Fatec para o curso de Análise e Desenvolvimento de Sistemas, onde me dediquei a vários projetos API (Aprendizagem por Projetos Integrados). Minha ênfase foi no desenvolvimento web, começando com HTML, CSS e JavaScript, evoluindo para React e TypeScript. Além disso, adquiri habilidades em bancos de dados como MySQL e MongoDB, e estou aprofundando meus conhecimentos em nuvem, já possuo o certificado Microsoft Azure-900 Fundamentals e Google Cloud Computing Foundations, estou cursando o AWS Academy Cloud Foundations.
+          Foi no NutriMind, projeto desenvolvido para a Xertica, que encontrei a área que quero seguir: Inteligência Artificial. Nele implementei do zero o pipeline de RAG em Python (embeddings, chunking e persistência no ChromaDB), construí as ferramentas que o agente usa para consultar a base de conhecimento e para atualizar o plano alimentar e o perfil de saúde do usuário, além de escrever os prompts dos agentes com o Google Gemini. Atuei também como Product Owner, conduzindo o backlog e a validação direta com o cliente.
         </p>
 
       </section>
@@ -96,6 +135,31 @@ function Home() {
         </h1>
 
         <div className={styles.habilidades}>
+          {isFullStack && (
+            <div className={styles.cardHabilidades}>
+              <div className={styles.topoCard}>
+                <h3 className={styles.tituloCard}>IA e Machine Learning</h3>
+              </div>
+              <div className={styles.conteudoCard}>
+                <div className={styles.listaIa}>
+                  {habilidadesIa.map(({ grupo, itens }) => (
+                    <div className={styles.grupoIa} key={grupo}>
+                      <p className={styles.grupoIaLabel}>{grupo}</p>
+                      <p className={styles.grupoIaItens}>
+                        {itens.map((item, idx) => (
+                          <span key={item}>
+                            {idx > 0 && <span className={styles.separadorIa}>/</span>}
+                            {item}
+                          </span>
+                        ))}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          )}
+
           <div className={styles.cardHabilidades}>
             <div className={styles.topoCard}>
               <h3 className={styles.tituloCard}>Hard Skills</h3>
@@ -103,24 +167,28 @@ function Home() {
             <div className={styles.conteudoCard}>
               {isFullStack ? (
                 <div className={styles.conjuntoHabilidades}>
+                  <CardHabilidade nome='Python' link='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg' />
+                  <CardHabilidade nome='Flask' link='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg' />
                   <CardHabilidade nome='JavaScript' link='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg' />
                   <CardHabilidade nome='TypeScript' link='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg' />
                   <CardHabilidade nome='React' link='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' />
-                  <CardHabilidade nome='Python' link='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg' />
-                  <CardHabilidade nome='Flask' link='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg' />
                   <CardHabilidade nome='Node.js' link='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg' />
-                  <CardHabilidade nome='AWS' link='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg' />
-                  <CardHabilidade nome='Azure' link='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg' />
+                  <CardHabilidade nome='Java' link='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg' />
+                  <CardHabilidade nome='Spring Boot' link='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg' />
+                  <CardHabilidade nome='PostgreSQL' link='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg' />
                   <CardHabilidade nome='MongoDB' link='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg' />
                   <CardHabilidade nome='MySQL' link='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg' />
-                  <CardHabilidade nome='Figma' link='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg' />
-                  <CardHabilidade nome='Java' link='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg' />
-                  <CardHabilidade nome='Unity' link='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg' />
-                  <CardHabilidade nome='Godot' link='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/godot/godot-original.svg' />
-                  <CardHabilidade nome='Jira' link='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg' />
-                  <CardHabilidade nome='Github' link={githubWhite} />
+                  <CardHabilidade nome='AWS' link='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg' />
+                  <CardHabilidade nome='Azure' link='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg' />
                   <CardHabilidade nome='Nginx' link='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg' />
                   <CardHabilidade nome='Linux' link='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg' />
+                  <CardHabilidade nome='Figma' link='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg' />
+                  <CardHabilidade nome='Jira' link='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg' />
+                  <CardHabilidade nome='Github' link={githubWhite} />
+                  {/* Unity e Godot voltam junto com a trilha de Game Dev */}
+                  {MOSTRAR_GAMEDEV && habilidadesJogos.map((habilidade) => (
+                    <CardHabilidade key={habilidade.nome} nome={habilidade.nome} link={habilidade.link} />
+                  ))}
                 </div>
               ) : (
                 <div className={styles.conjuntoHabilidades}>
@@ -146,29 +214,11 @@ function Home() {
         {isFullStack ? (
           <div className={styles.projetos}>
             <Projetos
-              foto={techschoolImg}
-              tecnologias={['HTML', 'CSS', 'JavaScript', 'Python', 'Flask', 'Bootstrap', 'Figma']}
-              titulo="Techschool"
-              periodo="1º Semestre de 2023"
-              texto="Site informativo sobre Metodologia Ágil com quizzes interativos, exemplos práticos e sistema de avaliação. Desenvolvido para capacitar colaboradores da empresa do cliente no uso do Scrum."
-              lado='esquerda'
-              tipo='dev'
-            />
-            <Projetos
-              foto={dashboardImg}
-              tecnologias={['React', 'TypeScript', 'JavaScript', 'Node.js', 'MySQL', 'Figma']}
-              titulo="Dashboard Pro4Tech"
-              periodo="1º Semestre de 2024"
-              texto="Dashboard interativo para análise e visualização de dados de vendas. O sistema importa dados de Excel, os armazena no banco e os exibe em gráficos e tabelas, com cálculo automático de comissões."
-              lado='direita'
-              tipo='dev'
-            />
-            <Projetos
-              foto={wecolebImg}
-              tecnologias={['React', 'TypeScript', 'Node.js', 'MySQL', 'Figma']}
-              titulo="Wecolleb"
-              periodo="2º Semestre de 2024"
-              texto="Sistema web para controle de processos internos da JJM Log. Automatizou fluxos manuais, habilitou acompanhamento de atividades em tempo real e melhorou a colaboração entre departamentos."
+              foto={nutrimindImg}
+              tecnologias={['Python', 'RAG', 'ChromaDB', 'Google Gemini', 'Flask', 'Spring Boot', 'Vue.js', 'PostgreSQL']}
+              titulo="NutriMind"
+              periodo="2º Semestre de 2025"
+              texto="Agente de IA generativa conversacional para suporte nutricional personalizado. Utiliza RAG com ChromaDB e Google Gemini para recomendar planos alimentares e responder dúvidas de nutrição com base no perfil de saúde do usuário. Atuei como Product Owner e fui responsável pelo pipeline de RAG e pelas ferramentas do agente."
               lado='esquerda'
               tipo='dev'
             />
@@ -182,11 +232,29 @@ function Home() {
               tipo='dev'
             />
             <Projetos
-              foto={nutrimindImg}
-              tecnologias={['Python', 'Flask', 'Java', 'Spring Boot', 'Vue.js', 'PostgreSQL', 'Google Gemini']}
-              titulo="NutriMind"
-              periodo="2º Semestre de 2025"
-              texto="Agente de IA generativa conversacional para suporte nutricional personalizado. Utiliza RAG com ChromaDB e Google Gemini para recomendar planos alimentares e responder dúvidas de nutrição com base no perfil de saúde do usuário."
+              foto={wecolebImg}
+              tecnologias={['React', 'TypeScript', 'Node.js', 'MySQL', 'Figma']}
+              titulo="Wecolleb"
+              periodo="2º Semestre de 2024"
+              texto="Sistema web para controle de processos internos da JJM Log. Automatizou fluxos manuais, habilitou acompanhamento de atividades em tempo real e melhorou a colaboração entre departamentos."
+              lado='esquerda'
+              tipo='dev'
+            />
+            <Projetos
+              foto={dashboardImg}
+              tecnologias={['React', 'TypeScript', 'JavaScript', 'Node.js', 'MySQL', 'Figma']}
+              titulo="Dashboard Pro4Tech"
+              periodo="1º Semestre de 2024"
+              texto="Dashboard interativo para análise e visualização de dados de vendas. O sistema importa dados de Excel, os armazena no banco e os exibe em gráficos e tabelas, com cálculo automático de comissões."
+              lado='direita'
+              tipo='dev'
+            />
+            <Projetos
+              foto={techschoolImg}
+              tecnologias={['HTML', 'CSS', 'JavaScript', 'Python', 'Flask', 'Bootstrap', 'Figma']}
+              titulo="Techschool"
+              periodo="1º Semestre de 2023"
+              texto="Site informativo sobre Metodologia Ágil com quizzes interativos, exemplos práticos e sistema de avaliação. Desenvolvido para capacitar colaboradores da empresa do cliente no uso do Scrum."
               lado='esquerda'
               tipo='dev'
             />

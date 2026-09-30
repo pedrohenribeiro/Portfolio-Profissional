@@ -17,6 +17,7 @@
   --periodo: #999B9E;
 }
 
+/* Tema usado pela trilha de Game Dev (ver MOSTRAR_GAMEDEV em src/config/features.ts) */
 .gamedev-theme {
   --principal: #ff3c00;
   --principal-claro: #FF6600;
