@@ -1,0 +1,5 @@
+portfolio-profissional/node_modules
+portfolio-profissional/dist
+.git
+.gitattributes
+*.md
